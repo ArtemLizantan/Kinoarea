@@ -9,6 +9,19 @@ body {
   box-sizing: border-box;
 }
 
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+  transition: all 0.5s;
+}
+
 body {
   --main-bg: #1e2538;
   --whiteColor: #fff;
@@ -18,4 +31,5 @@ body {
   --secondaryTextColor: #060e1e;
   --greyColor: #686868;
   --yellowColor: #f2f60f;
+  --lightGrayColor: rgba(227, 230, 240, 0.72);
 }

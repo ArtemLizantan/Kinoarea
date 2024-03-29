@@ -2,31 +2,9 @@ import { Link } from "react-router-dom";
 import styles from "./menu.module.scss";
 import Logo from "../../../logo/Logo";
 import { IoMdClose } from "react-icons/io";
-import { MouseEventHandler } from "react";
+import { IMenuProps, INavLink } from "../../../../interfaces/interfaces";
 
-interface INavLink {
-  name: string;
-  path: string;
-  id: number;
-}
-
-interface IMenuProps {
-  logo?: string;
-  closeBtn?: string;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-}
-
-const navLinks: INavLink[] = [
-  { name: "Афиша", path: "/", id: 1 },
-  { name: "Медиа", path: "/", id: 2 },
-  { name: "Фильмы", path: "/", id: 3 },
-  { name: "Актеры", path: "/", id: 4 },
-  { name: "Новости", path: "/", id: 5 },
-  { name: "Подборки", path: "/", id: 6 },
-  { name: "Категории", path: "/", id: 7 },
-];
-
-const HeaderMenu = ({ logo, closeBtn, onClick }: IMenuProps) => {
+const HeaderMenu = ({ logo, closeBtn, onClick, array, menu }: IMenuProps) => {
   return (
     <>
       {logo && closeBtn && (
@@ -37,8 +15,11 @@ const HeaderMenu = ({ logo, closeBtn, onClick }: IMenuProps) => {
           </button>
         </div>
       )}
-      <ul className={styles.menu}>
-        {navLinks.map(({ name, path, id }) => (
+      <ul
+        style={{ overflowX: menu ? "auto" : "unset" }}
+        className={styles.menu}
+      >
+        {array.map(({ name, path, id }: INavLink) => (
           <li key={id} className={styles.menu__item}>
             <Link className={styles.menu__itemLink} to={path}>
               {name}
