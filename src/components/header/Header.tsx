@@ -13,6 +13,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { IIcons, INavLink } from "../../interfaces/interfaces";
+import { ROUTES } from "../../routes";
 
 const icons: IIcons[] = [
   { name: <SlSocialVkontakte />, path: "/", id: 1 },
@@ -75,7 +76,7 @@ const Header = () => {
 
             <Links
               boxShadow="0 0 15px 0 rgba(72, 113, 255, 0.8)"
-              path="/"
+              path={ROUTES.LOGIN}
               text="Войти"
               background="#3657cb"
             />
