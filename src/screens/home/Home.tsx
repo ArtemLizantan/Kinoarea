@@ -1,5 +1,11 @@
+import NowInCinema from "./nowInCinema/NowInCinema";
+
 const Home = () => {
-  return <div></div>;
+  return (
+    <>
+      <NowInCinema />
+    </>
+  );
 };
 
 export default Home;

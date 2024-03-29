@@ -23,3 +23,9 @@ export interface IMenuProps {
   array: INavLink[];
   menu?: string;
 }
+
+export interface ICardMovieProps {
+  img: string;
+  name: string;
+  genre: string;
+}

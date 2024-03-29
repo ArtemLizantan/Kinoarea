@@ -17,12 +17,12 @@ const icons: IIcons[] = [
 ];
 
 const navLinks: INavLink[] = [
-  { name: "Афиша", path: "/", id: 1 },
-  { name: "Новости", path: "/", id: 2 },
-  { name: "Персоны", path: "/", id: 3 },
-  { name: "Рейтинги", path: "/", id: 4 },
-  { name: "Рецензии", path: "/", id: 5 },
-  { name: "Каталог фильмов", path: "/", id: 6 },
+  { name: "Schedule", path: "/", id: 1 },
+  { name: "News", path: "/", id: 2 },
+  { name: "People", path: "/", id: 3 },
+  { name: "Ratings", path: "/", id: 4 },
+  { name: "Reviews", path: "/", id: 5 },
+  { name: "Movie Catalog", path: "/", id: 6 },
 ];
 
 const Footer = () => {
@@ -38,8 +38,8 @@ const Footer = () => {
           </div>
           <div className={styles.footer__bottom}>
             <div className={styles.footer__copy}>
-              <h4>2020 © Kinoarea. Все права защищены</h4>
-              <Link to={"/"}>Политика конфиденциальности</Link>
+              <h4>2020 © Kinoarea. All rights reserved</h4>
+              <Link to={"/"}>Privacy Policy</Link>
             </div>
           </div>
         </div>

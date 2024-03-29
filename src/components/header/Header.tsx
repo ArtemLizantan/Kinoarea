@@ -23,13 +23,13 @@ const icons: IIcons[] = [
 ];
 
 const navLinks: INavLink[] = [
-  { name: "Афиша", path: "/", id: 1 },
-  { name: "Медиа", path: "/", id: 2 },
-  { name: "Фильмы", path: "/", id: 3 },
-  { name: "Актеры", path: "/", id: 4 },
-  { name: "Новости", path: "/", id: 5 },
-  { name: "Подборки", path: "/", id: 6 },
-  { name: "Категории", path: "/", id: 7 },
+  { name: "Schedule", path: "/", id: 1 },
+  { name: "Media", path: "/", id: 2 },
+  { name: "Movies", path: "/", id: 3 },
+  { name: "Actors", path: "/", id: 4 },
+  { name: "News", path: "/", id: 5 },
+  { name: "Collections", path: "/", id: 6 },
+  { name: "Categories", path: "/", id: 7 },
 ];
 
 const Header = () => {
@@ -77,7 +77,7 @@ const Header = () => {
             <Links
               boxShadow="0 0 15px 0 rgba(72, 113, 255, 0.8)"
               path={ROUTES.LOGIN}
-              text="Войти"
+              text="Login"
               background="#3657cb"
             />
           </div>
