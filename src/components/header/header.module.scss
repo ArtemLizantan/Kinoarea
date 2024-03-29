@@ -1,0 +1,83 @@
+.header {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 1440px) {
+    padding-top: 20px;
+  }
+  @media (max-width: 567px) {
+    padding-top: 10px;
+    min-height: 70px;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    @media (max-width: 1440px) {
+      flex-basis: 140px;
+    }
+    @media (max-width: 567px) {
+      flex-basis: 0px;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media (max-width: 1440px) {
+      flex-basis: 140px;
+      justify-content: flex-end;
+      gap: 0;
+    }
+    @media (max-width: 567px) {
+      flex-basis: 0px;
+    }
+  }
+  &__center {
+    @media (max-width: 1440px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+  &__tabletCenter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  &__leftMobile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.openMenu {
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  left: -100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  padding-top: 32px;
+  background-color: black;
+  transition: all 0.4s ease;
+  &.active {
+    opacity: 1;
+    overflow: visible;
+    visibility: visible;
+    left: 0%;
+    width: 100%;
+  }
+}

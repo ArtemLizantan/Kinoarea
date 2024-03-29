@@ -1,0 +1,11 @@
+.title {
+  font-weight: 900;
+  font-size: 65px;
+  color: #fff;
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+  @media (max-width: 567px) {
+    font-size: 32px;
+  }
+}

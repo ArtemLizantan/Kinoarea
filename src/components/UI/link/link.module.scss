@@ -1,0 +1,19 @@
+.link {
+  border-radius: 10px;
+  padding: 12px 46px;
+  background: var(--orange);
+  font-weight: 500;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 167%;
+  color: var(--whiteColor);
+  @media (max-width: 1440px) {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+  @media (max-width: 567px) {
+    padding: 6px 13px;
+    font-size: 11px;
+  }
+}

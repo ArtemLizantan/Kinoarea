@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &__itemLink {
+    padding: 5px;
+    svg {
+      fill: var(--greyColor);
+      width: 17px;
+      height: 17px;
+      transition: all 0.4s;
+      &:hover {
+        fill: var(--whiteColor);
+      }
+    }
+  }
+}

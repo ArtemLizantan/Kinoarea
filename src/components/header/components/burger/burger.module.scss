@@ -1,0 +1,15 @@
+.burger {
+  &__btn {
+    background-color: var(--whiteColor);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 5px 8px;
+    cursor: pointer;
+
+    svg {
+      width: 13px;
+      height: 13px;
+      fill: var(--blueColor);
+    }
+  }
+}
