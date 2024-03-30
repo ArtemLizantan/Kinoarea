@@ -1,0 +1,53 @@
+.card {
+  max-width: 340px;
+  width: 100%;
+  @media (max-width: 578px) {
+    max-width: 170px;
+  }
+  @media (max-width: 400px) {
+    max-width: 161px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+  &__img {
+    img {
+      max-width: 340px;
+      max-height: 480px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @media (max-width: 567px) {
+        max-width: 170px;
+        max-height: 240px;
+      }
+    }
+  }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--whiteColor);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+  }
+  &__genre {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--yellowColor);
+  }
+}
