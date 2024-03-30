@@ -6,7 +6,7 @@ const FilmCard = ({ img, name, genre }: ICardMovieProps) => {
     <div className={styles.card}>
       <div className={styles.card__body}>
         <div className={styles.card__img}>
-          <img src={img} alt="" />
+          <img src={img} alt="movieImg" />
         </div>
         <div className={styles.card__desc}>
           <h3 className={styles.card__name}>{name}</h3>

@@ -4,15 +4,15 @@ import styles from "./nowInCinemaCards.module.scss";
 import FilmCard from "../../../../../components/filmCard/FilmCard";
 
 const NowInCinemaCards = () => {
-  const { data } = useQuery({
-    queryKey: ["movies"],
-    queryFn: async () => {
-      const response = await moviesService.getNewMovies();
-      return response.data;
-    },
-  });
+  // const { data } = useQuery({
+  //   queryKey: ["movies"],
+  //   queryFn: async () => {
+  //     const response = await moviesService.getNewMovies();
+  //     return response.data;
+  //   },
+  // });
 
-  console.log(data);
+  // console.log(data);
 
   return <div className={styles.cards}>
     {/* {data.Search.map({poster,title,})} */}

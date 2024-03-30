@@ -1,12 +1,12 @@
-import { apiPath } from "./../vars";
-import axios from "axios";
+// import { apiPath } from "./../vars";
+// import axios from "axios";
 
-class MoviesServices {
-  private type = "type=movie";
+// class MoviesServices {
+//   async getNewMovies() {
+//     return axios.get(
+//       `${apiPath}`
+//     );
+//   }
+// }
 
-  async getNewMovies() {
-    return axios.get(`${apiPath}&${this.type}&y=2023&plot=full`);
-  }
-}
-
-export default new MoviesServices();
+// export default new MoviesServices();
