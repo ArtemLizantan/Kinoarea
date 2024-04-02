@@ -17,8 +17,21 @@ const NowInCinemaCards = ({
         ) : (
           filteredCards &&
           filteredCards.map(
-            ({ title, poster_path, genre, id }: INowInCinemaCards) => (
-              <FilmCard key={id} name={title} img={poster_path} genre={genre} />
+            ({
+              title,
+              poster_path,
+              genre,
+              id,
+              vote_average,
+            }: INowInCinemaCards) => (
+              <FilmCard
+                id={id}
+                key={id}
+                name={title}
+                img={poster_path}
+                genre={genre}
+                rating={vote_average}
+              />
             )
           )
         )}

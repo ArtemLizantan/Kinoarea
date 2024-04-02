@@ -9,16 +9,13 @@ import { useMovies } from "../../../context/Context";
 
 const NowInCinema = () => {
   const { data, isLoading } = useQuery<IDataMovies[]>({
-    queryKey: ["nowInCinemaData"],
+    queryKey: ["movies"],
     queryFn: async () => {
       return new Promise((resolve) => {
         moviesService.getNewMovies(resolve);
       });
     },
   });
-
-  console.log(data);
-  
 
   const { tabsData, setTabsData } = useMovies();
 

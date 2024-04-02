@@ -1,4 +1,5 @@
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 import Tabs from "../../../../../components/tabs/Tabs";
 import Title from "../../../../../components/title/Title";
 import styles from "./nowInCinemaTop.module.scss";
@@ -55,7 +56,7 @@ const NowInCinemaTop = ({ setTabsData }: INowInCinemaTopProps) => {
           {mobile && (
             <div className={styles.burger}>
               <button onClick={handleMenuOpen} className={styles.burger__btn}>
-                <GiHamburgerMenu />
+                {openMenu ? <IoMdClose /> : <GiHamburgerMenu />}
               </button>
             </div>
           )}
@@ -64,7 +65,12 @@ const NowInCinemaTop = ({ setTabsData }: INowInCinemaTopProps) => {
           <span></span>
         </div>
         <div className={styles.cinemaTop__right}>
-          <Tabs setTabsData={setTabsData} active={openMenu} array={tabs} />
+          <Tabs
+            setOpenMenu={setOpenMenu}
+            setTabsData={setTabsData}
+            active={openMenu}
+            array={tabs}
+          />
         </div>
       </div>
     </div>

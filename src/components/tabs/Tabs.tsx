@@ -6,7 +6,12 @@ interface TabActiveType {
   [key: string]: boolean;
 }
 
-const Tabs = ({ array, active, setTabsData }: ITabsProps) => {
+const Tabs = ({
+  array,
+  active,
+  setTabsData,
+  setOpenMenu,
+}: ITabsProps) => {
   const [tabActive, setTabActive] = useState<TabActiveType>({ 1: true });
 
   const handleTabActive = (id: number, nameOfTab: string) => {
@@ -14,6 +19,7 @@ const Tabs = ({ array, active, setTabsData }: ITabsProps) => {
       [id]: !tabActive[id],
     });
     setTabsData(nameOfTab);
+    setOpenMenu(false);
   };
 
   return (

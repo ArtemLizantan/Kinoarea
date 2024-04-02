@@ -28,6 +28,8 @@ export interface ICardMovieProps {
   img: string;
   name: string;
   genre: string;
+  id: number;
+  rating?: number;
 }
 
 export interface ITabs {
@@ -40,6 +42,7 @@ export interface ITabsProps {
   active?: boolean;
   nameOfTab?: string | undefined;
   setTabsData: (nameOfTab: string) => void;
+  setOpenMenu: (openMenu: boolean) => void;
 }
 
 export interface INowInCinemaCards {
@@ -47,6 +50,7 @@ export interface INowInCinemaCards {
   poster_path: string;
   genre: string;
   id: number;
+  vote_average: number;
 }
 
 export interface IDataMovies {
@@ -73,7 +77,6 @@ export interface IDataMovies {
   writers: string[];
   composer: string;
 }
-
 
 export interface INowInCinemaTopProps {
   setTabsData: (nameOfTab: string) => void;
