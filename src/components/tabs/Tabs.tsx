@@ -6,23 +6,22 @@ interface TabActiveType {
   [key: string]: boolean;
 }
 
-const Tabs = ({ array, active }: ITabsProps) => {
+const Tabs = ({ array, active, setTabsData }: ITabsProps) => {
   const [tabActive, setTabActive] = useState<TabActiveType>({});
 
-  const handleTabActive = (id: number) => {
+  const handleTabActive = (id: number, nameOfTab: string) => {
     setTabActive({
       [id]: !tabActive[id],
     });
+    setTabsData(nameOfTab);
   };
-
-  console.log(tabActive);
 
   return (
     <ul className={`${styles.tabs}  ${active ? styles.active : ""}`}>
       {array.map(({ name, id }: ITabs) => (
         <li key={id} className={styles.tabs__item}>
           <button
-            onClick={() => handleTabActive(id)}
+            onClick={() => handleTabActive(id, name)}
             className={`${styles.tabs__btn} ${
               tabActive[id] ? styles.active : ""
             }`}

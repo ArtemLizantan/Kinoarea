@@ -35,8 +35,14 @@
     border: none;
     color: var(--greyColor);
     cursor: pointer;
+    transition: color 0.4s ease;
     &.active {
       color: var(--whiteColor);
+    }
+    &:hover {
+      @media (min-width: 992px) {
+        color: var(--blueColor);
+      }
     }
     @media (max-width: 567px) {
       font-size: 15px;

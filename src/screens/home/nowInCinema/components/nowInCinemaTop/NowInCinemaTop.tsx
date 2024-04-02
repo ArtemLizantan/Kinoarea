@@ -1,10 +1,10 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-import Burger from "../../../../../components/header/components/burger/Burger";
 import Tabs from "../../../../../components/tabs/Tabs";
 import Title from "../../../../../components/title/Title";
 import styles from "./nowInCinemaTop.module.scss";
 import useResizeObserver from "use-resize-observer";
 import { useState } from "react";
+import { INowInCinemaTopProps } from "../../../../../interfaces/interfaces";
 
 const tabs = [
   {
@@ -37,7 +37,7 @@ const tabs = [
   },
 ];
 
-const NowInCinemaTop = () => {
+const NowInCinemaTop = ({ setTabsData }: INowInCinemaTopProps) => {
   const { ref, width } = useResizeObserver<HTMLDivElement>();
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -64,7 +64,7 @@ const NowInCinemaTop = () => {
           <span></span>
         </div>
         <div className={styles.cinemaTop__right}>
-          <Tabs active={openMenu} array={tabs} />
+          <Tabs setTabsData={setTabsData} active={openMenu} array={tabs} />
         </div>
       </div>
     </div>
