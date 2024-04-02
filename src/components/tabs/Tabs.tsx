@@ -7,7 +7,7 @@ interface TabActiveType {
 }
 
 const Tabs = ({ array, active, setTabsData }: ITabsProps) => {
-  const [tabActive, setTabActive] = useState<TabActiveType>({});
+  const [tabActive, setTabActive] = useState<TabActiveType>({ 1: true });
 
   const handleTabActive = (id: number, nameOfTab: string) => {
     setTabActive({

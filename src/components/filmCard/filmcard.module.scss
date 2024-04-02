@@ -48,6 +48,12 @@
     line-clamp: 1;
     box-orient: vertical;
   }
+  &__img {
+    height: 480px;
+    @media (max-width: 567px) {
+      height: 240px;
+    }
+  }
   &__genre {
     font-weight: 400;
     font-size: 15px;

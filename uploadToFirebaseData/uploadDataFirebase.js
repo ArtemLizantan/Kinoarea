@@ -10,7 +10,7 @@ admin.initializeApp({
 const db = admin.firestore();
 
 // Данные для фильмов
-const nowInCinemaData = require("./data/nowInCinemaData.js");
+const movies = require("./data/movies.js");
 
 // Функция для загрузки данных в коллекцию movies
 async function uploadToFirebaseCollections(data, collectionName) {
@@ -28,7 +28,7 @@ async function uploadToFirebaseCollections(data, collectionName) {
 // Вызываем функцию для загрузки данных
 async function main() {
   try {
-    // await uploadToFirebaseCollections(nowInCinemaData, "nowInCinema");
+    await uploadToFirebaseCollections(movies, "movies");
     console.log("Скрипт завершен");
     process.exit(0);
   } catch (error) {

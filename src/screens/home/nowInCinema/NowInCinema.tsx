@@ -17,6 +17,9 @@ const NowInCinema = () => {
     },
   });
 
+  console.log(data);
+  
+
   const { tabsData, setTabsData } = useMovies();
 
   const filteredCards = data?.filter((movie) => {

@@ -1,14 +1,13 @@
-// moviesService.js
 import { db } from "./../firebase";
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
 
 class MoviesServices {
   async getNewMovies(callback) {
-    const productsCollection = collection(db, "nowInCinema");
+    const q = query(collection(db, "movies"), where("year", "==", "2024"));
 
-    onSnapshot(productsCollection, (snapshot) => {
+    onSnapshot(q, (snapshot) => {
       const moviesData = snapshot.docs.map((doc) => doc.data());
-      callback(moviesData); // Вызываем callback с полученными данными
+      callback(moviesData);
     });
   }
 }
