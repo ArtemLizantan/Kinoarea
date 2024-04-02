@@ -29,3 +29,13 @@ export interface ICardMovieProps {
   name: string;
   genre: string;
 }
+
+export interface ITabs {
+  name: string;
+  id: number;
+}
+
+export interface ITabsProps {
+  array: ITabs[];
+  active?: boolean;
+}

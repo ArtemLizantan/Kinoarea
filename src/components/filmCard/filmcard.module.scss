@@ -23,6 +23,9 @@
         max-width: 170px;
         max-height: 240px;
       }
+      @media (max-width: 400px) {
+        max-height: 224px;
+      }
     }
   }
   &__desc {

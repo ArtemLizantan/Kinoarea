@@ -28,7 +28,7 @@ async function uploadToFirebaseCollections(data, collectionName) {
 // Вызываем функцию для загрузки данных
 async function main() {
   try {
-    await uploadToFirebaseCollections(nowInCinemaData, "nowInCinema");
+    // await uploadToFirebaseCollections(nowInCinemaData, "nowInCinema");
     console.log("Скрипт завершен");
     process.exit(0);
   } catch (error) {
