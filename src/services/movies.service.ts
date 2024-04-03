@@ -1,5 +1,11 @@
 import { db } from "./../firebase";
-import { collection, query, where, onSnapshot } from "firebase/firestore";
+import {
+  collection,
+  query,
+  where,
+  onSnapshot,
+  getDocs,
+} from "firebase/firestore";
 
 class MoviesServices {
   async getNewMovies(callback) {
@@ -9,6 +15,18 @@ class MoviesServices {
       const moviesData = snapshot.docs.map((doc) => doc.data());
       callback(moviesData);
     });
+  }
+  async getRolesInMovies({ nameFilm }) {
+    const actors = [];
+    const querySnapshot = await getDocs(
+      collection(db, "movies", nameFilm, "actors")
+    );
+
+    querySnapshot.forEach((doc) => {
+      actors.push(doc.data());
+    });
+
+    return actors;
   }
 }
 

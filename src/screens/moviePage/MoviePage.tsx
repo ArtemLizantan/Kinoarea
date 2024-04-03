@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import MovieLike from "./components/movieLike/MovieLike";
 import styles from "./moviePage.module.scss";
 import MovieTable from "./components/movieTable/MovieTable";
+import MovieMainRoles from "./components/movieMainRoles/MovieMainRoles";
 
 const InfoCard = () => {
   const { id } = useParams();
@@ -15,7 +16,9 @@ const InfoCard = () => {
   });
 
   const movie = data?.find((item) => item.id === Number(numberFromId));
-  console.log(movie);
+
+  console.log(movie?.title);
+  
 
   return data === undefined ? (
     <div>Nothing</div>
@@ -35,7 +38,9 @@ const InfoCard = () => {
           <MovieLike />
           <MovieTable movie={movie} />
         </div>
-        <div className={styles.moviePage__center}></div>
+        <div className={styles.moviePage__center}>
+          <MovieMainRoles nameFilm={movie?.title} />
+        </div>
         <div className={styles.moviePage__bottom}></div>
       </div>
     </section>

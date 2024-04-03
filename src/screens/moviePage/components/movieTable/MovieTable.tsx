@@ -3,7 +3,6 @@ import styles from "./movieTable.module.scss";
 const MovieTable = ({ movie }) => {
   const arrayFromMoviesObject = [];
   arrayFromMoviesObject.push(movie);
-  console.log(arrayFromMoviesObject);
 
   return (
     arrayFromMoviesObject.length !== 0 && (

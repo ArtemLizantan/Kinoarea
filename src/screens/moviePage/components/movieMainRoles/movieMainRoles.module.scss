@@ -1,0 +1,30 @@
+.roles {
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  &__card {
+    display: block;
+    max-width: 248px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+  }
+  &__img {
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--whiteColor);
+  }
+}
