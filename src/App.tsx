@@ -6,7 +6,7 @@ import Footer from "./components/footer/Footer";
 import { ROUTES } from "./routes";
 import Login from "./screens/login/Login";
 import Register from "./screens/register/Register";
-import InfoCard from "./screens/infoCard/InfoCard";
+import InfoCard from "./screens/moviePage/MoviePage";
 
 function App() {
   return (

@@ -41,8 +41,9 @@ export interface ITabsProps {
   array: ITabs[];
   active?: boolean;
   nameOfTab?: string | undefined;
-  setTabsData: (nameOfTab: string) => void;
-  setOpenMenu: (openMenu: boolean) => void;
+  contextData: string;
+  setContextData: (contextData: string) => void;
+  setOpenMenu: (active: boolean) => void;
 }
 
 export interface INowInCinemaCards {
@@ -78,11 +79,17 @@ export interface IDataMovies {
   composer: string;
 }
 
-export interface INowInCinemaTopProps {
-  setTabsData: (nameOfTab: string) => void;
-}
-
 export interface INowInCinemaCardsProps {
   filteredCards: IDataMovies[] | undefined;
   isLoading: boolean;
+}
+
+export interface IMainInfoCardProps {
+  poster: string | undefined;
+  title: string | undefined;
+  rating: number | undefined;
+  desc: string | undefined;
+  id: number | undefined;
+  slogan: string | undefined;
+  backGroundPoster: string | undefined;
 }

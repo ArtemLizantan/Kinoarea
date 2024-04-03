@@ -1,4 +1,4 @@
-const nowInCinemaData = [
+const movies = [
   {
     id: 1,
     title: "Kung Fu Panda 4",
@@ -26,6 +26,8 @@ const nowInCinemaData = [
     ukraine_premiere_date: "2024-03-09",
     age_rating: "6+",
     runtime: "1 hour 34 minutes",
+    backGroundPoster:
+      "https://s2.afisha.ru/mediastorage/fd/5e/69d416e4ef4b44aeb49f21e45efd.jpg",
   },
   {
     id: 2,
@@ -52,9 +54,11 @@ const nowInCinemaData = [
     worldwide_revenue: "$190,400,000",
     premiere_date: "2021-12-16",
     age_rating: "R",
+    backGroundPoster:
+      "https://m.media-amazon.com/images/S/pv-target-images/50c40f3c19e0edfd85792a8352dd157ec3950d3a5ab304aa5605fefd1fecbdc9._SX1080_FMjpg_.jpg",
   },
   {
-    id: 3,
+    id: 50,
     title: "Spider-Man: No Way Home",
     vote_average: 8.5,
     poster_path:
@@ -78,6 +82,9 @@ const nowInCinemaData = [
     worldwide_revenue: "$1,922,500,000",
     premiere_date: "2021-12-17",
     age_rating: "PG-13",
+
+    backGroundPoster:
+      "https://static01.nyt.com/images/2021/12/17/arts/16spider-man-review/merlin_199080312_33263efe-93b3-432c-84ca-6e040624dfdf-videoSixteenByNineJumbo1600.jpg",
   },
   {
     id: 4,
@@ -104,6 +111,9 @@ const nowInCinemaData = [
     worldwide_revenue: "$416,000,000",
     premiere_date: "2021-10-22",
     age_rating: "PG-13",
+
+    backGroundPoster:
+      "https://c.files.bbci.co.uk/DB93/production/_120411265_dune.jpg",
   },
   {
     id: 5,
@@ -130,6 +140,8 @@ const nowInCinemaData = [
     worldwide_revenue: "$379,000,000",
     premiere_date: "2021-07-07",
     age_rating: "PG-13",
+    backGroundPoster:
+      "https://imageio.forbes.com/specials-images/imageserve/60689b0219870425bdc3cd13/BLACK-WIDOW/0x0.jpg?format=jpg&crop=1393,784,x710,y57,safe&width=960",
   },
   {
     id: 6,
@@ -156,6 +168,8 @@ const nowInCinemaData = [
     worldwide_revenue: "$506,100,000",
     premiere_date: "2022-03-04",
     age_rating: "PG-13",
+    backGroundPoster:
+      "https://m.media-amazon.com/images/M/MV5BMmViZTY0ZDQtOTM5Zi00Yjc1LWJlN2EtZTliZjI2NmU5NDIyXkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_.jpg",
   },
   {
     id: 7,
@@ -181,6 +195,8 @@ const nowInCinemaData = [
     worldwide_revenue: "$221,300,000",
     premiere_date: "2021-07-28",
     age_rating: "PG-13",
+    backGroundPoster:
+      "https://www.ocregister.com/wp-content/uploads/2019/10/jungle-cruise-16x9-1.jpg?w=978",
   },
   {
     id: 8,
@@ -309,6 +325,8 @@ const nowInCinemaData = [
     worldwide_revenue: "$532,000,000",
     premiere_date: "2022-12-15",
     age_rating: "PG-13",
+    backGroundPoster:
+      "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/05/avatar-way-of-water-poster-header.jpg",
   },
   {
     id: 14,
@@ -780,4 +798,4 @@ const nowInCinemaData = [
   },
 ];
 
-module.exports = nowInCinemaData;
+module.exports = movies;

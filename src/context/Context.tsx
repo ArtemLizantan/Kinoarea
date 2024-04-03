@@ -7,7 +7,7 @@ interface MyComponentProps {
 const MoviesContext = createContext({});
 
 export const MoviesProvider = ({ children }: MyComponentProps) => {
-  const [tabsData, setTabsData] = useState<string | undefined>("All");
+  const [tabsData, setTabsData] = useState<string>("All");
 
   const contextValue = { tabsData, setTabsData };
 

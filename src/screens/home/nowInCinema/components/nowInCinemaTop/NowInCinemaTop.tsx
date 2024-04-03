@@ -5,7 +5,7 @@ import Title from "../../../../../components/title/Title";
 import styles from "./nowInCinemaTop.module.scss";
 import useResizeObserver from "use-resize-observer";
 import { useState } from "react";
-import { INowInCinemaTopProps } from "../../../../../interfaces/interfaces";
+import { useMovies } from "../../../../../context/Context";
 
 const tabs = [
   {
@@ -38,7 +38,8 @@ const tabs = [
   },
 ];
 
-const NowInCinemaTop = ({ setTabsData }: INowInCinemaTopProps) => {
+const NowInCinemaTop = () => {
+  const { tabsData, setTabsData } = useMovies();
   const { ref, width } = useResizeObserver<HTMLDivElement>();
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -67,9 +68,10 @@ const NowInCinemaTop = ({ setTabsData }: INowInCinemaTopProps) => {
         <div className={styles.cinemaTop__right}>
           <Tabs
             setOpenMenu={setOpenMenu}
-            setTabsData={setTabsData}
             active={openMenu}
             array={tabs}
+            setContextData={setTabsData}
+            contextData={tabsData}
           />
         </div>
       </div>

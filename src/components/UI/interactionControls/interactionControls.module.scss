@@ -1,0 +1,18 @@
+.interactionControls {
+  background-color: unset;
+  border: 1px solid var(--whiteColor);
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  &:hover {
+    @media (min-width: 768px) {
+      background-color: var(--blueColor);
+    }
+  }
+  svg {
+    fill: var(--whiteColor);
+    width: 26px;
+    height: 26px;
+  }
+}
