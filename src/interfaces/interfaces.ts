@@ -77,6 +77,8 @@ export interface IDataMovies {
   genre: string;
   writers: string[];
   composer: string;
+  frames: string[];
+  backGroundPoster: string;
 }
 
 export interface INowInCinemaCardsProps {
@@ -92,4 +94,30 @@ export interface IMainInfoCardProps {
   id: number | undefined;
   slogan: string | undefined;
   backGroundPoster: string | undefined;
+}
+
+export interface IPopupSwiperProps {
+  setIsModalOpen: (isModalOpen: boolean) => void;
+  isModalOpen: boolean;
+  photos: string[] | undefined;
+}
+
+export interface IMovieTableProps {
+  movie: {
+    year: string;
+    country: string;
+    slogan: string;
+    directors: string[];
+    producer: string;
+    cinematographer: string;
+    composer: string;
+    id: number;
+    artist: string;
+    premiere_date: string;
+    worldwide_revenue: string;
+    age_rating: string;
+    release_date: string;
+    vote_average: string;
+    duration: string;
+  };
 }

@@ -1,9 +1,15 @@
 .roles {
   &__body {
     display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  &__bottom {
+    display: flex;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
   }
   &__card {
     display: block;
@@ -20,6 +26,7 @@
       height: 250px;
       object-fit: cover;
       border-radius: 10px;
+      object-position: top;
     }
   }
   &__name {

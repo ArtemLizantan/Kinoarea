@@ -25,6 +25,13 @@ const movies = [
     age_rating: "PG-13",
     backGroundPoster:
       "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/05/avatar-way-of-water-poster-header.jpg",
+    frames: [
+      "https://images.immediate.co.uk/production/volatile/sites/3/2022/12/Avatar-The-Way-of-Water-cast-a7ea95b.jpg?quality=90&resize=620,414",
+      "https://images.lifestyleasia.com/wp-content/uploads/sites/5/2022/12/22110714/avatar-2-1600x900.jpeg",
+      "https://www.hollywoodreporter.com/wp-content/uploads/2022/11/Avatar-Way-of-Water-Worthington-Everett-MCDAVTH_WD002-H-2022.jpg?w=1296",
+      "https://d.newsweek.com/en/full/2027477/avatar-2-movie.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYzA5MWExMWYtYjA5Ni00YWZkLTkzOTUtZGJlZGJiYzNlZDVkXkEyXkFqcGdeQXZ3ZXNsZXk@._V1_.jpg",
+    ],
   },
 ];
 

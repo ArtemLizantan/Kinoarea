@@ -1,6 +1,8 @@
+import React from "react";
 import styles from "./movieTable.module.scss";
+import { IMovieTableProps } from "../../../../interfaces/interfaces";
 
-const MovieTable = ({ movie }) => {
+const MovieTable = ({ movie }: IMovieTableProps) => {
   const arrayFromMoviesObject = [];
   arrayFromMoviesObject.push(movie);
 
@@ -9,7 +11,7 @@ const MovieTable = ({ movie }) => {
       <div className={styles.movieTable}>
         <div className={styles.movieTable__body}>
           <div className={styles.movieTable__columns}>
-            <ul key="movieList" className={styles.movieTable__column}>
+            <ul className={styles.movieTable__column}>
               {arrayFromMoviesObject.map(
                 ({
                   year,
@@ -19,8 +21,9 @@ const MovieTable = ({ movie }) => {
                   producer,
                   cinematographer,
                   composer,
+                  id,
                 }) => (
-                  <>
+                  <React.Fragment key={`column_${id}`}>
                     <li className={styles.movieTable__columnItem}>
                       <div className={styles.movieTable__columnLeft}>
                         Country:
@@ -75,11 +78,11 @@ const MovieTable = ({ movie }) => {
                         {composer}
                       </div>
                     </li>
-                  </>
+                  </React.Fragment>
                 )
               )}
             </ul>
-            <ul key="movieList2" className={styles.movieTable__column}>
+            <ul className={styles.movieTable__column}>
               {arrayFromMoviesObject.map(
                 ({
                   artist,
@@ -88,10 +91,10 @@ const MovieTable = ({ movie }) => {
                   age_rating,
                   release_date,
                   vote_average,
-
+                  id,
                   duration,
                 }) => (
-                  <>
+                  <React.Fragment key={`column_${id}`}>
                     <li className={styles.movieTable__columnItem}>
                       <div className={styles.movieTable__columnLeft}>
                         Artist:
@@ -148,7 +151,7 @@ const MovieTable = ({ movie }) => {
                         {duration}
                       </div>
                     </li>
-                  </>
+                  </React.Fragment>
                 )
               )}
             </ul>

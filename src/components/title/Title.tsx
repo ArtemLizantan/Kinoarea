@@ -1,7 +1,7 @@
 import styles from "./title.module.scss";
 
 interface ITitle {
-  text: string;
+  text: string | undefined;
 }
 
 const Title = ({ text }: ITitle) => {
