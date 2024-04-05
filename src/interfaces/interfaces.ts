@@ -83,3 +83,7 @@ export interface INowInCinemaCardsProps {
   filteredCards: IDataMovies[] | undefined;
   isLoading: boolean;
 }
+
+export interface emailForm {
+  email: string,
+}

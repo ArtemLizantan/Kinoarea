@@ -7,6 +7,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import HeaderMenu from "../header/components/headerMenu/HeaderMenu";
 import { Link } from "react-router-dom";
+import NewsLetter from "./newsLetter/newsLetter";
 
 const icons: IIcons[] = [
   { name: <SlSocialVkontakte />, path: "/", id: 1 },
@@ -30,6 +31,7 @@ const Footer = () => {
     <div className={styles.footer}>
       <Container>
         <div className={styles.footer__body}>
+          <NewsLetter />
           <div className={styles.footer__top}>
             <SocialLinks array={icons} />
           </div>
