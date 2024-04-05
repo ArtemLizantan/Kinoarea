@@ -1,0 +1,11 @@
+.trailers {
+  &__top {
+    margin-top: 50px;
+    margin-bottom: 63px;
+  }
+  &__bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

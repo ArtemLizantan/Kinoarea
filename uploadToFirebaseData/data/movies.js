@@ -5,7 +5,7 @@ const movies = [
     vote_average: 7.9,
     poster_path: "https://m.media-amazon.com/images/I/71pieM7cJtL.jpg",
     release_date: "2022-12-15",
-    genre: "Action",
+    genre: ["Action"],
     duration: "2 hours 41 minutes",
     overview:
       "The sequel to Avatar (2009) continues the story of the Na'vi on Pandora, as they explore the other worlds around them while facing new threats and challenges.",
@@ -41,12 +41,11 @@ const movies = [
     poster_path:
       "https://cdn.europosters.eu/image/1300/posters/the-lord-of-the-rings-the-return-of-the-king-i104633.jpg",
     release_date: "2003-12-17",
-    genre: "Action",
+    genre: ["Action"],
     duration: "3 hours 21 minutes",
     overview:
       "The final battle for Middle-earth begins. Frodo and Sam, led by Gollum, continue their dangerous mission toward Mount Doom while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith.",
-    trailer:
-      "https://www.youtube.com/embed/r5X-hFf6Bwo?si=0gwBoLaoIaP-S7YN",
+    trailer: "https://www.youtube.com/embed/r5X-hFf6Bwo?si=0gwBoLaoIaP-S7YN",
     year: "2003",
     country: "USA, New Zealand",
     slogan: "The eye of the enemy is moving.",
@@ -78,12 +77,11 @@ const movies = [
     poster_path:
       "https://m.media-amazon.com/images/I/71zji3aER6L._AC_UF894,1000_QL80_.jpg",
     release_date: "2003-07-09",
-    genre: "Action",
+    genre: ["Action"],
     duration: "2 hours 23 minutes",
     overview:
       "Blacksmith Will Turner teams up with eccentric pirate 'Captain' Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.",
-    trailer:
-      "https://www.youtube.com/embed/naQr0uTrH_s?si=EctTVIGS3obu2MU3",
+    trailer: "https://www.youtube.com/embed/naQr0uTrH_s?si=EctTVIGS3obu2MU3",
     year: "2003",
     country: "USA",
     slogan: "Prepare to be blown out of the water.",
@@ -97,8 +95,7 @@ const movies = [
     worldwide_revenue: "$654,264,015",
     premiere_date: "2003-07-09",
     age_rating: "PG-13",
-    backGroundPoster:
-      "https://images5.alphacoders.com/636/636845.jpg",
+    backGroundPoster: "https://images5.alphacoders.com/636/636845.jpg",
     frames: [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfiEIgol8WQuN9wtiQ17lvxH6KYRp2wyRRHkjNmIvLfw&s",
       "https://c4.wallpaperflare.com/wallpaper/784/421/189/pirates-of-the-caribbean-pirates-of-the-caribbean-the-curse-of-the-black-pearl-elizabeth-swann-keira-knightley-wallpaper-preview.jpg",
@@ -114,12 +111,11 @@ const movies = [
     vote_average: 8.1,
     poster_path: "https://i.ebayimg.com/images/g/cKcAAOSwEixkUtLA/s-l1200.webp",
     release_date: "1993-06-11",
-    genre: "Action",
+    genre: ["Action", "Comedy"],
     duration: "2 hours 7 minutes",
     overview:
       "During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.",
-    trailer:
-      "https://www.youtube.com/embed/sqlfsYpUFSQ?si=bOP6R_nO05NnncGE",
+    trailer: "https://www.youtube.com/embed/sqlfsYpUFSQ?si=bOP6R_nO05NnncGE",
     year: "1993",
     country: "USA",
     slogan: "An adventure 65 million years in the making.",
@@ -148,14 +144,14 @@ const movies = [
     id: 5,
     title: "Inception",
     vote_average: 8.8,
-    poster_path: "https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg",
+    poster_path:
+      "https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg",
     release_date: "2010-07-16",
-    genre: "Action",
+    genre: ["Action"],
     duration: "2 hours 28 minutes",
     overview:
       "A thief who enters the dreams of others to steal their secrets gets a chance to redeem himself when he is offered a task that can change the world.",
-    trailer:
-      "https://www.youtube.com/embed/85Zz1CCXyDI?si=2KZTtOw15VqWHKEm",
+    trailer: "https://www.youtube.com/embed/85Zz1CCXyDI?si=2KZTtOw15VqWHKEm",
     year: "2010",
     country: "USA",
     slogan: "Your mind is the scene of the crime.",
@@ -180,6 +176,117 @@ const movies = [
       "https://cdn.britannica.com/13/147813-050-37062815/Leonardo-DiCaprio-Joseph-Gordon-Levitt-Inception-Christopher-Nolan.jpg",
     ],
   },
+  {
+    id: 6,
+    title: "The Grand Budapest Hotel",
+    vote_average: 8.1,
+    poster_path:
+      "https://m.media-amazon.com/images/I/51OM85JsXxL._AC_UF1000,1000_QL80_.jpg",
+    release_date: "2014-03-07",
+    genre: ["Comedy"],
+    duration: "1 hour 39 minutes",
+    overview:
+      "The adventures of Gustave H, a legendary concierge at a famous European hotel between the wars, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
+    trailer: "https://www.youtube.com/embed/1Fg5iWmQjwk?si=c-Nqmn_Gv7UfXY7K",
+    year: "2014",
+    country: "USA",
+    slogan: "A hotel. A dream. A legend.",
+    directors: "Wes Anderson",
+    writers: "Wes Anderson",
+    producer: "Wes Anderson, Scott Rudin, Steven M. Rales, Jeremy Dawson",
+    cinematographer: "Robert Yeoman",
+    composer: "Alexandre Desplat",
+    artist: "Adam Stockhausen",
+    editor: "Barney Pilling",
+    worldwide_revenue: "$174,800,023",
+    premiere_date: "2014-02-06",
+    age_rating: "R",
+    backGroundPoster:
+      "https://cinegods.com/wp-content/uploads/2014/03/The-Grand-Budapest-Hotel-5-1080x675.jpg",
+    frames: [
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/1f/83/d2/the-grand-budapest-hotel.jpg?w=700&h=-1&s=1",
+      "https://www.morningjournal.com/wp-content/uploads/migration/2014/03/161ecb9052bf3fae40a77ed607275ce1.jpg?w=640",
+      "https://media.newyorker.com/photos/59095152c14b3c606c1037a4/master/pass/The-Grand-Budapest-Hotel-580.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN3F_YdcV694ox2yPxNCSQxeGGEZ22Oi30HuUVDSgTHg&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRChCHBj2Id10LgNxmRd37DT8t_XDmAmF7n6Z6RODDJYQ&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ZaMrGF99a5rOe2bBwiudgj9CBiaHrO4xDXTbqB98Gw&s",
+    ],
+  },
+  {
+    id: 7,
+    title: "Superbad",
+    vote_average: 7.6,
+    poster_path:
+      "https://m.media-amazon.com/images/I/51RBgkne2yL._AC_UF894,1000_QL80_.jpg",
+    release_date: "2007-08-17",
+    genre: ["Comedy"],
+    duration: "1 hour 53 minutes",
+    overview:
+      "Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.",
+    trailer: "https://www.youtube.com/embed/4eaZ_48ZYog?si=EwNu137HgQiypcSb",
+    year: "2007",
+    country: "USA",
+    slogan: "Come and Get Some",
+    directors: "Greg Mottola",
+    writers: "Seth Rogen, Evan Goldberg",
+    producer: "Judd Apatow, Shauna Robertson",
+    cinematographer: "Russ T. Alsobrook",
+    composer: "Lyle Workman",
+    artist: "Chris Spellman",
+    editor: "William Kerr",
+    worldwide_revenue: "$170,787,220",
+    premiere_date: "2007-08-17",
+    age_rating: "R",
+    backGroundPoster:
+      "https://variety.com/wp-content/uploads/2022/05/Screen-Shot-2022-05-11-at-3.06.55-PM.png?w=1000&h=563&crop=1",
+    frames: [
+      "https://ew.com/thmb/8k_34xiyHEmkBdmFdaDySm8iVtQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/superbad-watn-tout-2000-3a285c3992d041f29273e45cd38f9ecc.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAzYRAFgLRXYnJiZtq3DuW2prmD1yCZQYCDSroOKVNbA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBq-N2OkmAUHzZh8XhGIMaMT9zTZpPE0xj_7NQD2t_w&s",
+      "https://www.pluggedin.com/wp-content/uploads/2019/12/superbad.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1RJ1HC1oFtRNB_iTC83ge8gT7xiA8kE4FZcACEL9ryw&s",
+      "https://i0.wp.com/www.thewrap.com/wp-content/uploads/2017/08/SuperbadCover.png?resize=618%2C412&ssl=1",
+    ],
+  },
+  {
+    id: 8,
+    title: "Gone Girl",
+    vote_average: 8.1,
+    poster_path:
+      "https://play-lh.googleusercontent.com/Xk0RPwvgGG4Cv8Mb6PDk9IW_3bqxuLD4dHuWS6dzt013q7cImxd_J21Cuezi_lYfyIds",
+    release_date: "2014-10-03",
+    genre: ["Thriller", "Action"],
+    duration: "2 hours 29 minutes",
+    overview:
+      "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+    trailer: "https://www.youtube.com/embed/Ym3LB0lOJ0o",
+    year: "2014",
+    country: "USA",
+    slogan: "You don't know what you've got 'til it's...",
+    directors: "David Fincher",
+    writers: "Gillian Flynn",
+    producer:
+      "Arnon Milchan, Reese Witherspoon, Leslie Dixon, Bruna Papandrea, Ceán Chaffin",
+    cinematographer: "Jeff Cronenweth",
+    composer: "Trent Reznor, Atticus Ross",
+    artist: "Donald Graham Burt",
+    editor: "Kirk Baxter",
+    worldwide_revenue: "$369,330,363",
+    premiere_date: "2014-09-26",
+    age_rating: "R",
+    backGroundPoster:
+      "https://people.com/thmb/jCrSE3u1MuQEygZ-e0HJzbrPyeM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1139x499:1141x501)/Rosamund-Pike-in-the-Gone-Girl-542064fc18894e28bee2d41131900257.jpg",
+    frames: [
+      "https://variety.com/wp-content/uploads/2014/09/gone-girl-2.jpg",
+      "https://static01.nyt.com/images/2014/09/26/arts/26GONE/26GONE-articleLarge-v2.jpg?year=2014&h=448&w=600&s=a6bc0fe7aeaacd1facdbb2232a96ed4c69d69430688ac6f07c514efdf7ace28f&k=ZQJBKqZ0VN&tw=1",
+      "https://www.indiewire.com/wp-content/uploads/2014/09/gone-girl-4.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKqK7Bd3P67HRXYQ_bIAPjCNWZu3UFBKTIvPGzm5Pxw6R8EfUgtSG1-P3K9gYc-RNTjzw&usqp=CAU",
+      "https://i.guim.co.uk/img/static/sys-images/Observer/Pix/pictures/2014/10/1/1412179548768/Gone-Girl-film-of-the-wee-014.jpg?width=620&quality=85&auto=format&fit=max&s=ff9ed1ee07dfdfd5dbebfc754d2c98ff",
+      "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/06/gone-girl-ben-affleck-1.jpeg",
+    ],
+  },
 ];
 
 module.exports = movies;
+
+//Ralph Fiennes Harry Potter + The Grand Budapest Hotel

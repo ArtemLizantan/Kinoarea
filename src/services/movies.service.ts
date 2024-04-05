@@ -36,7 +36,7 @@ class MoviesServices {
   async getSimilarFilms({ genreFilm }, callback) {
     const q = query(
       collection(db, "movies"),
-      where("genre", "==", genreFilm),
+      where("genre", "array-contains", genreFilm),
       limit(5)
     );
 

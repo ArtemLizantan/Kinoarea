@@ -27,7 +27,7 @@ export interface IMenuProps {
 export interface ICardMovieProps {
   img: string;
   name: string;
-  genre: string;
+  genre: string[];
   id: number;
   rating?: number;
 }

@@ -19,7 +19,7 @@ const FilmCard = ({ img, name, genre, id, rating }: ICardMovieProps) => {
         </div>
         <div className={styles.card__desc}>
           <h3 className={styles.card__name}>{name}</h3>
-          <h4 className={styles.card__genre}>{genre}</h4>
+          <h4 className={styles.card__genre}>{genre.join(", ")}</h4>
         </div>
       </div>
     </div>

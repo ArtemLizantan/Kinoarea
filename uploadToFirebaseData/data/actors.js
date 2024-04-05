@@ -60,7 +60,7 @@ const actors = [
   {
     name: "Leonardo DiCaprio",
     img: "https://cdn.britannica.com/65/227665-050-D74A477E/American-actor-Leonardo-DiCaprio-2016.jpg",
-    roles: [{ "Inception": "Dom Cobb" }],
+    roles: [{ Inception: "Dom Cobb" }],
     movies: [
       "Inception",
       "Titanic",
@@ -105,6 +105,48 @@ const actors = [
       "X-Men",
       "Beauty and the Beast",
     ],
+  },
+  {
+    name: "Jonah Hill",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Hm1TFdONFHdtrRB-gL1awrEAmJ7NvP7ipUhZ9_7VyA&s",
+    roles: [{ Superbad: "Seth" }],
+    movies: ["Superbad"],
+  },
+  {
+    name: "Michael Cera",
+    img: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/182528_v9_bb.jpg",
+    roles: [{ Superbad: "Evan" }],
+    movies: ["Superbad"],
+  },
+  {
+    name: "Bill Murray",
+    img: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/8327_v9_bc.jpg",
+    roles: [{ "The Grand Budapest Hotel": "M. Ivan" }],
+    movies: ["The Grand Budapest Hotel"],
+  },
+  {
+    name: "Ralph Fiennes",
+    img: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/52809_v9_bb.jpg",
+    roles: [{ "The Grand Budapest Hotel": "M. Gustave" }],
+    movies: ["The Grand Budapest Hotel"],
+  },
+  {
+    name: "Ben Affleck",
+    img: "https://cdn.britannica.com/33/242333-050-95A19CE8/Actor-Ben-Affleck-premiere-AIR-March-2023.jpg",
+    roles: [{ "Gone Girl": "Nick Dunne" }],
+    movies: ["Gone Girl"],
+  },
+  {
+    name: "Rosamund Pike",
+    img: "https://www.instyle.com/thmb/5El4v0tDSEO93rTRGWcpkmr_2Oc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/012216-rosamund-pike-bob-lead-7d76d50490c54c9e891aa4a4d32862c2.jpg",
+    roles: [{ "Gone Girl": "Amy Dunne" }],
+    movies: ["Gone Girl"],
+  },
+  {
+    name: "Neil Patrick Harris",
+    img: "https://m.media-amazon.com/images/M/MV5BMTUxNjQ4MjU5Ml5BMl5BanBnXkFtZTcwMTY5NzAzNw@@._V1_.jpg",
+    roles: [{ "Gone Girl": "Desi Collins" }],
+    movies: ["Gone Girl"],
   },
 ];
 

@@ -1,10 +1,14 @@
+import NewTrailers from "./newTrailers/NewTrailers";
 import NowInCinema from "./nowInCinema/NowInCinema";
-
+import styles from "./home.module.scss";
 const Home = () => {
   return (
-    <>
-      <NowInCinema />
-    </>
+    <div className={styles.home}>
+      <div className={styles.home__body}>
+        <NowInCinema />
+        <NewTrailers />
+      </div>
+    </div>
   );
 };
 

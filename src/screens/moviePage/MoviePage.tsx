@@ -47,7 +47,7 @@ const InfoCard = () => {
           <MoviePhotos array={movie?.frames} />
         </div>
         <div className={styles.moviePage__similar}>
-          <MovieSimilar genreFilm={movie?.genre} />
+          <MovieSimilar genreFilm={movie?.genre.join()} />
         </div>
       </div>
     </section>
