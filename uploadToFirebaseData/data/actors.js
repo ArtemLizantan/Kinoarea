@@ -57,6 +57,55 @@ const actors = [
       "Avatar: The Way of Water",
     ],
   },
+  {
+    name: "Leonardo DiCaprio",
+    img: "https://cdn.britannica.com/65/227665-050-D74A477E/American-actor-Leonardo-DiCaprio-2016.jpg",
+    roles: [{ "Inception": "Dom Cobb" }],
+    movies: [
+      "Inception",
+      "Titanic",
+      "The Wolf of Wall Street",
+      "Once Upon a Time in Hollywood",
+    ],
+  },
+  {
+    name: "Jeff Goldblum",
+    img: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Jeff_Goldblum_by_Gage_Skidmore_3.jpg",
+    roles: [{ "Jurassic Park": "Dr. Ian Malcolm" }],
+    movies: [
+      "Jurassic Park",
+      "The Fly",
+      "Thor: Ragnarok",
+      "The Grand Budapest Hotel",
+    ],
+  },
+  {
+    name: "Johnny Depp",
+    img: "https://m.media-amazon.com/images/M/MV5BOTBhMTI1NDQtYmU4Mi00MjYyLTk5MjEtZjllMDkxOWY3ZGRhXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg",
+    roles: [
+      {
+        "Pirates of the Caribbean: The Curse of the Black Pearl":
+          "Captain Jack Sparrow",
+      },
+    ],
+    movies: [
+      "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "Edward Scissorhands",
+      "Sweeney Todd: The Demon Barber of Fleet Street",
+      "Alice in Wonderland",
+    ],
+  },
+  {
+    name: "Ian McKellen",
+    img: "https://m.media-amazon.com/images/M/MV5BMTQ2MjgyNjk3MV5BMl5BanBnXkFtZTcwNTA3NTY5Mg@@._V1_.jpg",
+    roles: [{ "The Lord of the Rings: The Return of the King": "Gandalf" }],
+    movies: [
+      "The Lord of the Rings: The Return of the King",
+      "The Hobbit: An Unexpected Journey",
+      "X-Men",
+      "Beauty and the Beast",
+    ],
+  },
 ];
 
 module.exports = actors;

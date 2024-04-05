@@ -10,7 +10,11 @@ import {
 
 class MoviesServices {
   async getNewMovies(callback) {
-    const q = query(collection(db, "movies"), where("year", "==", "2024"),limit(1));
+    const q = query(
+      collection(db, "movies"),
+      // where("year", "==", "2024"),
+      limit(10)
+    );
 
     onSnapshot(q, (snapshot) => {
       const moviesData = snapshot.docs.map((doc) => doc.data());
@@ -28,6 +32,18 @@ class MoviesServices {
     });
 
     return actors;
+  }
+  async getSimilarFilms({ genreFilm }, callback) {
+    const q = query(
+      collection(db, "movies"),
+      where("genre", "==", genreFilm),
+      limit(5)
+    );
+
+    onSnapshot(q, (snapshot) => {
+      const moviesData = snapshot.docs.map((doc) => doc.data());
+      callback(moviesData);
+    });
   }
 }
 

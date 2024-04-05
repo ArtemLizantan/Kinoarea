@@ -7,6 +7,7 @@ import styles from "./moviePage.module.scss";
 import MovieTable from "./components/movieTable/MovieTable";
 import MovieMainRoles from "./components/movieMainRoles/MovieMainRoles";
 import MoviePhotos from "./components/moviePhotos/MoviePhotos";
+import MovieSimilar from "./components/movieSimilar/MovieSimilar";
 
 const InfoCard = () => {
   const { id } = useParams();
@@ -17,8 +18,6 @@ const InfoCard = () => {
   });
 
   const movie = data?.find((item) => item.id === Number(numberFromId));
-
-  console.log(movie);
 
   return data === undefined ? (
     <div>Nothing</div>
@@ -46,6 +45,9 @@ const InfoCard = () => {
         </div>
         <div className={styles.moviePage__photos}>
           <MoviePhotos array={movie?.frames} />
+        </div>
+        <div className={styles.moviePage__similar}>
+          <MovieSimilar genreFilm={movie?.genre} />
         </div>
       </div>
     </section>

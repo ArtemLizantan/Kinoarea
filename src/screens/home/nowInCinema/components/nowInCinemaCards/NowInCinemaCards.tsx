@@ -17,13 +17,7 @@ const NowInCinemaCards = ({
         ) : (
           filteredCards &&
           filteredCards.map(
-            ({
-              title,
-              poster_path,
-              genre,
-              id,
-              vote_average,
-            }: INowInCinemaCards) => (
+            ({ title, poster_path, genre, id, vote_average }:INowInCinemaCards) => (
               <FilmCard
                 id={id}
                 key={id}

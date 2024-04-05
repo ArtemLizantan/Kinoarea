@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./screens/home/Home";
 import Header from "./components/header/Header";
 import Layout from "./components/layout/Layout";
@@ -7,8 +7,15 @@ import { ROUTES } from "./routes";
 import Login from "./screens/login/Login";
 import Register from "./screens/register/Register";
 import InfoCard from "./screens/moviePage/MoviePage";
+import { useEffect } from "react";
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="wrapper">
       <Header />

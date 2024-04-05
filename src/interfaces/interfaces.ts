@@ -86,9 +86,6 @@ export interface INowInCinemaCardsProps {
   isLoading: boolean;
 }
 
-export interface emailForm {
-  email: string;
-}
 export interface IMainInfoCardProps {
   poster: string | undefined;
   title: string | undefined;

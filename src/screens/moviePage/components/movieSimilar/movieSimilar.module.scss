@@ -1,0 +1,13 @@
+.similar {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+}
