@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import { ROUTES } from "./routes";
 import Login from "./screens/login/Login";
 import Register from "./screens/register/Register";
+import InfoCard from "./screens/moviePage/MoviePage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.REGISTER} element={<Register />} />
+          <Route path={`${ROUTES.MOVIE}/:id`} element={<InfoCard />} />
         </Routes>
       </Layout>
       <Footer />

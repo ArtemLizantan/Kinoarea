@@ -1,10 +1,11 @@
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 import Tabs from "../../../../../components/tabs/Tabs";
 import Title from "../../../../../components/title/Title";
 import styles from "./nowInCinemaTop.module.scss";
 import useResizeObserver from "use-resize-observer";
 import { useState } from "react";
-import { INowInCinemaTopProps } from "../../../../../interfaces/interfaces";
+import { useMovies } from "../../../../../context/Context";
 
 const tabs = [
   {
@@ -37,7 +38,8 @@ const tabs = [
   },
 ];
 
-const NowInCinemaTop = ({ setTabsData }: INowInCinemaTopProps) => {
+const NowInCinemaTop = () => {
+  const { tabsData, setTabsData } = useMovies();
   const { ref, width } = useResizeObserver<HTMLDivElement>();
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -55,7 +57,7 @@ const NowInCinemaTop = ({ setTabsData }: INowInCinemaTopProps) => {
           {mobile && (
             <div className={styles.burger}>
               <button onClick={handleMenuOpen} className={styles.burger__btn}>
-                <GiHamburgerMenu />
+                {openMenu ? <IoMdClose /> : <GiHamburgerMenu />}
               </button>
             </div>
           )}
@@ -64,7 +66,13 @@ const NowInCinemaTop = ({ setTabsData }: INowInCinemaTopProps) => {
           <span></span>
         </div>
         <div className={styles.cinemaTop__right}>
-          <Tabs setTabsData={setTabsData} active={openMenu} array={tabs} />
+          <Tabs
+            setOpenMenu={setOpenMenu}
+            active={openMenu}
+            array={tabs}
+            setContextData={setTabsData}
+            contextData={tabsData}
+          />
         </div>
       </div>
     </div>

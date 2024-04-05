@@ -1,7 +1,6 @@
 import styles from "./nowincinema.module.scss";
 import NowInCinemaTop from "./components/nowInCinemaTop/NowInCinemaTop";
 import NowInCinemaCards from "./components/nowInCinemaCards/NowInCinemaCards";
-
 import { useQuery } from "@tanstack/react-query";
 import moviesService from "../../../services/movies.service";
 import { IDataMovies } from "../../../interfaces/interfaces";
@@ -9,7 +8,7 @@ import { useMovies } from "../../../context/Context";
 
 const NowInCinema = () => {
   const { data, isLoading } = useQuery<IDataMovies[]>({
-    queryKey: ["nowInCinemaData"],
+    queryKey: ["movies"],
     queryFn: async () => {
       return new Promise((resolve) => {
         moviesService.getNewMovies(resolve);
@@ -17,7 +16,7 @@ const NowInCinema = () => {
     },
   });
 
-  const { tabsData, setTabsData } = useMovies();
+  const { tabsData } = useMovies();
 
   const filteredCards = data?.filter((movie) => {
     if (tabsData === "All") {
@@ -32,7 +31,7 @@ const NowInCinema = () => {
   return (
     <section className={styles.nowcinema}>
       <div className={styles.nowcinema__body}>
-        <NowInCinemaTop setTabsData={setTabsData} />
+        <NowInCinemaTop />
         <NowInCinemaCards isLoading={isLoading} filteredCards={limitedCards} />
       </div>
     </section>

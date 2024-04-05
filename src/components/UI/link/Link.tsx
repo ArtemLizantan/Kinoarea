@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import styles from "./link.module.scss";
-interface IBtn {
+
+interface ILink {
   text: string;
   background: string;
   path: string;
   boxShadow?: string;
 }
 
-const Links = ({ text, background, path, boxShadow }: IBtn) => {
+const Links = ({ text, background, path, boxShadow }: ILink) => {
   return (
     <Link
       to={path}

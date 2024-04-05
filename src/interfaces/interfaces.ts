@@ -28,6 +28,8 @@ export interface ICardMovieProps {
   img: string;
   name: string;
   genre: string;
+  id: number;
+  rating?: number;
 }
 
 export interface ITabs {
@@ -39,7 +41,9 @@ export interface ITabsProps {
   array: ITabs[];
   active?: boolean;
   nameOfTab?: string | undefined;
-  setTabsData: (nameOfTab: string) => void;
+  contextData: string;
+  setContextData: (contextData: string) => void;
+  setOpenMenu: (active: boolean) => void;
 }
 
 export interface INowInCinemaCards {
@@ -47,6 +51,7 @@ export interface INowInCinemaCards {
   poster_path: string;
   genre: string;
   id: number;
+  vote_average: number;
 }
 
 export interface IDataMovies {
@@ -72,11 +77,8 @@ export interface IDataMovies {
   genre: string;
   writers: string[];
   composer: string;
-}
-
-
-export interface INowInCinemaTopProps {
-  setTabsData: (nameOfTab: string) => void;
+  frames: string[];
+  backGroundPoster: string;
 }
 
 export interface INowInCinemaCardsProps {
@@ -85,5 +87,41 @@ export interface INowInCinemaCardsProps {
 }
 
 export interface emailForm {
-  email: string,
+  email: string;
+}
+export interface IMainInfoCardProps {
+  poster: string | undefined;
+  title: string | undefined;
+  rating: number | undefined;
+  desc: string | undefined;
+  id: number | undefined;
+  slogan: string | undefined;
+  backGroundPoster: string | undefined;
+  trailer: string | undefined;
+}
+
+export interface IPopupSwiperProps {
+  setIsModalOpen: (isModalOpen: boolean) => void;
+  isModalOpen: boolean;
+  photos: string[] | undefined;
+}
+
+export interface IMovieTableProps {
+  movie: {
+    year: string;
+    country: string;
+    slogan: string;
+    directors: string[];
+    producer: string;
+    cinematographer: string;
+    composer: string;
+    id: number;
+    artist: string;
+    premiere_date: string;
+    worldwide_revenue: string;
+    age_rating: string;
+    release_date: string;
+    vote_average: string;
+    duration: string;
+  };
 }

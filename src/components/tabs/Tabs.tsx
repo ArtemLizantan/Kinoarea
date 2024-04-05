@@ -1,19 +1,16 @@
-import { useState } from "react";
 import styles from "./tabs.module.scss";
 import { ITabs, ITabsProps } from "../../interfaces/interfaces";
 
-interface TabActiveType {
-  [key: string]: boolean;
-}
-
-const Tabs = ({ array, active, setTabsData }: ITabsProps) => {
-  const [tabActive, setTabActive] = useState<TabActiveType>({});
-
-  const handleTabActive = (id: number, nameOfTab: string) => {
-    setTabActive({
-      [id]: !tabActive[id],
-    });
-    setTabsData(nameOfTab);
+const Tabs = ({
+  array,
+  active,
+  setOpenMenu,
+  contextData,
+  setContextData,
+}: ITabsProps) => {
+  const handleTabActive = (nameOfTab: string) => {
+    setContextData(nameOfTab);
+    setOpenMenu(false);
   };
 
   return (
@@ -21,9 +18,9 @@ const Tabs = ({ array, active, setTabsData }: ITabsProps) => {
       {array.map(({ name, id }: ITabs) => (
         <li key={id} className={styles.tabs__item}>
           <button
-            onClick={() => handleTabActive(id, name)}
+            onClick={() => handleTabActive(name)}
             className={`${styles.tabs__btn} ${
-              tabActive[id] ? styles.active : ""
+              contextData === name ? styles.active : ""
             }`}
           >
             {name}

@@ -1,0 +1,82 @@
+.cardInfo {
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  &__left {
+    img {
+      width: 404px;
+      height: 559px;
+      border-radius: 10px;
+    }
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      box-shadow: inset 0px -250px 115px -100px #1e2538;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.7)
+      );
+      z-index: 1;
+    }
+    img {
+      object-fit: cover;
+      object-position: top;
+      height: 100vh;
+      width: 100%;
+    }
+  }
+}
+
+.cardInfoRight {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__desc {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 167%;
+    color: var(--whiteColor);
+    max-width: 535px;
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--whiteColor);
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}

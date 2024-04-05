@@ -36,12 +36,12 @@
 
 @font-face {
   font-family: "Qanelas";
-  src: url("Qanelas-Black.eot");
-  src: local("Qanelas Black"), local("Qanelas-Black"),
-    url("Qanelas-Black.eot?#iefix") format("embedded-opentype"),
-    url("Qanelas-Black.woff2") format("woff2"),
-    url("Qanelas-Black.woff") format("woff"),
-    url("Qanelas-Black.ttf") format("truetype");
+  src: url("../fonts/Qanelas-Black.eot");
+  src: local("../fonts/Qanelas Black"), local("Qanelas-Black"),
+    url("../fonts/Qanelas-Black.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Qanelas-Black.woff2") format("woff2"),
+    url("../fonts/Qanelas-Black.woff") format("woff"),
+    url("../fonts/Qanelas-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
