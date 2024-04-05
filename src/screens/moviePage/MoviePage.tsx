@@ -36,6 +36,7 @@ const InfoCard = () => {
             title={movie?.title}
             slogan={movie?.slogan}
             backGroundPoster={movie?.backGroundPoster}
+            trailer={movie?.trailer}
           />
           <MovieLike />
           <MovieTable movie={movie} />

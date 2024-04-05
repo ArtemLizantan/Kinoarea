@@ -6,6 +6,8 @@ import Title from "../../../../components/title/Title";
 import { IIcons, IMainInfoCardProps } from "../../../../interfaces/interfaces";
 import styles from "./mainInfoCard.module.scss";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { useState } from "react";
+import Popup from "../../../../components/popup/Popup";
 
 const icons: IIcons[] = [
   { name: <SlSocialVkontakte />, path: "/", id: 1 },
@@ -21,7 +23,14 @@ const MainInfoCard = ({
   desc,
   slogan,
   backGroundPoster,
+  trailer,
 }: IMainInfoCardProps) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <div className={styles.cardInfo}>
       <div className={styles.cardInfo__background}>
@@ -47,7 +56,10 @@ const MainInfoCard = ({
           </div>
           <div className={styles.cardInfoRight__bottom}>
             <div className={styles.cardInfoRight__bottomLeft}>
-              <MovieTrailerButton text={"watch the trailer"} />
+              <MovieTrailerButton
+                onClick={showModal}
+                text={"watch the trailer"}
+              />
             </div>
             <div className={styles.cardInfoRight__bottomRight}>
               <SocialLinks array={icons} />
@@ -55,6 +67,18 @@ const MainInfoCard = ({
           </div>
         </div>
       </div>
+      <Popup isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
+        <iframe
+          width="100%"
+          height="600px"
+          src={trailer}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </Popup>
     </div>
   );
 };

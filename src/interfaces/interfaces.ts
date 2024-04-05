@@ -94,6 +94,7 @@ export interface IMainInfoCardProps {
   id: number | undefined;
   slogan: string | undefined;
   backGroundPoster: string | undefined;
+  trailer: string | undefined;
 }
 
 export interface IPopupSwiperProps {
