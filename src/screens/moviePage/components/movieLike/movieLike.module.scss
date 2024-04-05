@@ -1,5 +1,8 @@
-.movieControls{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.movieControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
