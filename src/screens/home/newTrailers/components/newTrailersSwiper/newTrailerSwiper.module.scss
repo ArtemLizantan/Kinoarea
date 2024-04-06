@@ -2,6 +2,64 @@
   &__body {
     display: flex;
     flex-direction: column;
+    gap: 50px;
+    @media (max-width: 1300px) {
+      gap: 25px;
+    }
+  }
+  &__wrapperSlide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 45px;
+    color: var(--whiteColor);
+    text-align: left;
+    max-width: 600px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 1;
+    box-orient: vertical;
+    display: -webkit-box;
+    @media (max-width: 1300px) {
+      font-size: 35px;
+    }
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
+  }
+  &__bottomInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+  }
+  &__bottomInfoLeft {
+    display: flex;
+    align-items: end;
+    gap: 40px;
+    @media (max-width: 768px) {
+      justify-content: space-between;
+      width: 100%;
+    }
+    @media (max-width: 567px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+  &__bottomInfoRight {
+    display: flex;
+    align-items: center;
     gap: 10px;
   }
 }

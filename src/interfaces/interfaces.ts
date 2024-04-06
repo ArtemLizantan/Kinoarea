@@ -122,3 +122,12 @@ export interface IMovieTableProps {
     duration: string;
   };
 }
+
+
+export interface IframeAttributes {
+  title: string;
+  frameBorder: string;
+  allow: string;
+  referrerPolicy: string;
+  allowFullScreen?: boolean;
+}

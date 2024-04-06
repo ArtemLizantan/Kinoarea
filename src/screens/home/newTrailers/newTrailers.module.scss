@@ -2,6 +2,10 @@
   &__top {
     margin-top: 50px;
     margin-bottom: 63px;
+    @media (max-width: 567px) {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
   }
   &__bottom{
     display: flex;

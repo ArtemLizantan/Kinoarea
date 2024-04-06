@@ -41,10 +41,29 @@
 .trailers-swiper1 .swiper-slide iframe {
   height: 550px;
   object-position: top;
+
+  @media (max-width: 1300px) {
+    height: 350px;
+  }
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+  @media (max-width: 567px) {
+    height: 150px;
+  }
 }
 .trailers-swiper2 .swiper-slide iframe {
   height: 150px;
   pointer-events: none;
+  @media (max-width: 1300px) {
+    height: 100px;
+  }
+  @media (max-width: 768px) {
+    height: 70px;
+  }
+  @media (max-width: 567px) {
+    height: 50px;
+  }
 }
 
 .trailers-swiper2 .swiper-slide-thumb-active {
