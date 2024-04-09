@@ -2,9 +2,10 @@ import { useQuery } from "@tanstack/react-query";
 import { useMovies } from "../../../context/Context";
 import { IDataMovies } from "../../../interfaces/interfaces";
 import moviesService from "../../../services/movies.service";
-import PopularCards from "./components/popularCards/PopularCards";
 import PopularTop from "./components/popularTop/PopularTop";
 import styles from "./popular.module.scss";
+import PopularCardsSwiper from "./components/popularCardsSwiper/PopularCardsSwiper";
+
 const Popular = () => {
   const { data, isLoading } = useQuery<IDataMovies[]>({
     queryKey: ["movies-popular"],
@@ -13,7 +14,7 @@ const Popular = () => {
         moviesService.getFilms(
           {
             dbFirebase: "movies",
-            limitOfCards: 4,
+            limitOfCards: 24,
             field: "vote_average",
             options: ">",
             value: "7.4",
@@ -33,16 +34,18 @@ const Popular = () => {
       return movie.year.includes(tabsDataPopular);
     }
   });
-  
+
   console.log(filteredCards);
-  
 
   const limitedCards = filteredCards?.slice(0, 8);
   return (
     <section className={styles.nowcinema}>
       <div className={styles.nowcinema__body}>
         <PopularTop />
-        <PopularCards isLoading={isLoading} filteredCards={limitedCards} />
+        <PopularCardsSwiper
+          isLoading={isLoading}
+          filteredCards={limitedCards}
+        />
       </div>
     </section>
   );

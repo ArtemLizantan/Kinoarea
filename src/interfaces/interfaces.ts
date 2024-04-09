@@ -51,7 +51,7 @@ export interface INowInCinemaCards {
   poster_path: string;
   genre: string;
   id: number;
-  vote_average: number;
+  vote_average: number | string;
 }
 
 export interface IDataMovies {
