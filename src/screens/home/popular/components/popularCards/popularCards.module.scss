@@ -1,0 +1,12 @@
+.cards {
+    @media (max-width: 567px) {
+      width: 100%;
+    }
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

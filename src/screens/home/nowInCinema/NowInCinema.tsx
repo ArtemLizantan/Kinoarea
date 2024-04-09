@@ -1,28 +1,28 @@
 import styles from "./nowincinema.module.scss";
-import NowInCinemaTop from "./components/nowInCinemaTop/NowInCinemaTop";
 import NowInCinemaCards from "./components/nowInCinemaCards/NowInCinemaCards";
 import { useQuery } from "@tanstack/react-query";
 import moviesService from "../../../services/movies.service";
 import { IDataMovies } from "../../../interfaces/interfaces";
 import { useMovies } from "../../../context/Context";
+import NowInCinemaTop from "./components/nowInCinemaTop/NowInCinemaTop";
 
 const NowInCinema = () => {
   const { data, isLoading } = useQuery<IDataMovies[]>({
     queryKey: ["movies"],
     queryFn: async () => {
       return new Promise((resolve) => {
-        moviesService.getNewMovies(resolve);
+        moviesService.getFilms({ dbFirebase: "movies", limitOfCards: 10 }, resolve);
       });
     },
   });
 
-  const { tabsData } = useMovies();
+  const { tabsDataNowInCinema } = useMovies();
 
   const filteredCards = data?.filter((movie) => {
-    if (tabsData === "All") {
+    if (tabsDataNowInCinema === "All") {
       return true;
     } else {
-      return movie.genre.includes(tabsData);
+      return movie.genre.includes(tabsDataNowInCinema);
     }
   });
 

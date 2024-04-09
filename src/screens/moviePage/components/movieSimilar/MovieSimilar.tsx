@@ -21,12 +21,23 @@ const MovieSimilar = ({ genreFilm }: { genreFilm: string | undefined }) => {
     queryKey: ["additionalMovies"],
     queryFn: async () => {
       return new Promise((resolve) => {
-        moviesService.getSimilarFilms({ genreFilm }, resolve);
+        moviesService.getFilms(
+          {
+            dbFirebase: "movies",
+            field: "genre",
+            options: "array-contains",
+            value: genreFilm,
+            limitOfCards: 5,
+          },
+          resolve
+        );
       });
     },
   });
 
   const filteredData = data?.filter((movie) => movie.id !== numberFromId);
+
+  console.log(filteredData);
 
   return (
     <div className={styles.similar}>

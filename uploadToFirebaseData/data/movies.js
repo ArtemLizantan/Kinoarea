@@ -2,7 +2,7 @@ const movies = [
   {
     id: 1,
     title: "Avatar: The Way of Water",
-    vote_average: 7.9,
+    vote_average: "7.9",
     poster_path: "https://m.media-amazon.com/images/I/71pieM7cJtL.jpg",
     release_date: "2022-12-15",
     genre: ["Action"],
@@ -37,7 +37,7 @@ const movies = [
   {
     id: 2,
     title: "The Lord of the Rings: The Return of the King",
-    vote_average: 8.9,
+    vote_average: "8.9",
     poster_path:
       "https://cdn.europosters.eu/image/1300/posters/the-lord-of-the-rings-the-return-of-the-king-i104633.jpg",
     release_date: "2003-12-17",
@@ -73,7 +73,7 @@ const movies = [
   {
     id: 3,
     title: "Pirates of the Caribbean: The Curse of the Black Pearl",
-    vote_average: 8.0,
+    vote_average: "8.0",
     poster_path:
       "https://m.media-amazon.com/images/I/71zji3aER6L._AC_UF894,1000_QL80_.jpg",
     release_date: "2003-07-09",
@@ -108,7 +108,7 @@ const movies = [
   {
     id: 4,
     title: "Jurassic Park",
-    vote_average: 8.1,
+    vote_average: "8.1",
     poster_path: "https://i.ebayimg.com/images/g/cKcAAOSwEixkUtLA/s-l1200.webp",
     release_date: "1993-06-11",
     genre: ["Action", "Comedy"],
@@ -143,7 +143,7 @@ const movies = [
   {
     id: 5,
     title: "Inception",
-    vote_average: 8.8,
+    vote_average: "8.8",
     poster_path:
       "https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg",
     release_date: "2010-07-16",
@@ -179,7 +179,7 @@ const movies = [
   {
     id: 6,
     title: "The Grand Budapest Hotel",
-    vote_average: 8.1,
+    vote_average: "8.1",
     poster_path:
       "https://m.media-amazon.com/images/I/51OM85JsXxL._AC_UF1000,1000_QL80_.jpg",
     release_date: "2014-03-07",
@@ -215,7 +215,7 @@ const movies = [
   {
     id: 7,
     title: "Superbad",
-    vote_average: 7.6,
+    vote_average: "7.6",
     poster_path:
       "https://m.media-amazon.com/images/I/51RBgkne2yL._AC_UF894,1000_QL80_.jpg",
     release_date: "2007-08-17",
@@ -251,7 +251,7 @@ const movies = [
   {
     id: 8,
     title: "Gone Girl",
-    vote_average: 8.1,
+    vote_average: "8.1",
     poster_path:
       "https://play-lh.googleusercontent.com/Xk0RPwvgGG4Cv8Mb6PDk9IW_3bqxuLD4dHuWS6dzt013q7cImxd_J21Cuezi_lYfyIds",
     release_date: "2014-10-03",

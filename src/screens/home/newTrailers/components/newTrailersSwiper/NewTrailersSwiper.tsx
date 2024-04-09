@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import 'swiper/css/scrollbar';
 import { FreeMode, Scrollbar, Thumbs } from "swiper/modules";
 import { useState } from "react";
 import styles from "./newTrailerSwiper.module.scss";
@@ -34,7 +35,7 @@ const icons: IIcons[] = [
   { name: <FaTwitter />, path: "/", id: 4 },
 ];
 
-const NewTrailersSwiper = ({ trailers }: {}) => {
+const NewTrailersSwiper = ({ trailers }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   console.log(trailers);
@@ -90,14 +91,15 @@ const NewTrailersSwiper = ({ trailers }: {}) => {
           <Swiper
             onSwiper={setThumbsSwiper}
             spaceBetween={10}
+            scrollbar={{ draggable: true }}
             slidesPerView={4}
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Thumbs, Scrollbar]}
             className="trailers-swiper2"
-            scrollbar={{
-              hide: false,
-            }}
+            // scrollbar={{
+            //   hide: false,
+            // }}
           >
             {trailers &&
               trailers.map(({ backGroundPoster, trailer, id }: IDataMovies) => (

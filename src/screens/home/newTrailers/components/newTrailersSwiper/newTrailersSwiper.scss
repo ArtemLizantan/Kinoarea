@@ -27,6 +27,20 @@
 .trailers-swiper2 {
   height: 20%;
   padding-top: 10px;
+  padding-bottom: 20px !important;
+  .swiper-scrollbar {
+    cursor: grab;
+    background-color: var(--main-bg) !important;
+    z-index: 20;
+    height: 7px !important;
+    @media (max-width: 567px) {
+      height: 2px !important;
+    }
+    .swiper-scrollbar-drag {
+      background-color: var(--blueColor) !important;
+    }
+  }
+  
   .swiper-slide {
     cursor: pointer;
   }
@@ -76,3 +90,4 @@
   height: 100%;
   object-fit: cover;
 }
+

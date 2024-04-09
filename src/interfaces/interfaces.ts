@@ -61,7 +61,7 @@ export interface IDataMovies {
   cinematographer: string;
   slogan: string;
   duration: string;
-  vote_average: number;
+  vote_average: string;
   year: string;
   premiere_date: string;
   artist: string;
@@ -123,11 +123,18 @@ export interface IMovieTableProps {
   };
 }
 
-
 export interface IframeAttributes {
   title: string;
   frameBorder: string;
   allow: string;
   referrerPolicy: string;
   allowFullScreen?: boolean;
+}
+
+export interface IMovieServicesGetFilmProps {
+  dbFirebase: string;
+  field: string;
+  options: string;
+  value: string | number;
+  limitOfCards: number;
 }

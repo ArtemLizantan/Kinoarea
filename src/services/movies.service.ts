@@ -1,3 +1,4 @@
+import { IMovieServicesGetFilmProps } from "../interfaces/interfaces";
 import { db } from "./../firebase";
 import {
   collection,
@@ -9,11 +10,20 @@ import {
 } from "firebase/firestore";
 
 class MoviesServices {
-  async getNewMovies(callback) {
+  async getFilms(
+    {
+      dbFirebase,
+      field,
+      options,
+      value,
+      limitOfCards,
+    }: IMovieServicesGetFilmProps,
+    callback
+  ) {
     const q = query(
-      collection(db, "movies"),
-      // where("year", "==", "2024"),
-      limit(10)
+      collection(db, dbFirebase),
+      field && where(field, options, value),
+      limit(limitOfCards)
     );
 
     onSnapshot(q, (snapshot) => {
@@ -21,6 +31,7 @@ class MoviesServices {
       callback(moviesData);
     });
   }
+
   async getRolesInMovies({ nameFilm }) {
     const actors = [];
     const querySnapshot = await getDocs(
@@ -32,18 +43,6 @@ class MoviesServices {
     });
 
     return actors;
-  }
-  async getSimilarFilms({ genreFilm }, callback) {
-    const q = query(
-      collection(db, "movies"),
-      where("genre", "array-contains", genreFilm),
-      limit(5)
-    );
-
-    onSnapshot(q, (snapshot) => {
-      const moviesData = snapshot.docs.map((doc) => doc.data());
-      callback(moviesData);
-    });
   }
 }
 
