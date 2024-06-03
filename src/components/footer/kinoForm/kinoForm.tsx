@@ -2,6 +2,7 @@ import Logo from "../../logo/Logo";
 import styles from "./newsLetter.module.scss";
 import background from "../../../img/footer/background.jpg";
 import FooterForm from "./form/Form";
+import Title from "../../title/Title";
 
 const KinoForm = () => {
   return (
@@ -13,9 +14,7 @@ const KinoForm = () => {
         </div>
         <div className={styles.form__center}>
           <div className={styles.center}>
-            <h2 className={styles.center__title}>
-              Subscribe to E-mail newsletter
-            </h2>
+            <Title text="Subscribe to E-mail newsletter" />
             <p className={styles.center__subtitle}>
               If you want to keep abreast of the latest news and new films -
               fill out the form below and sign up for a free E-mail newsletter!

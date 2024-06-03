@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import 'swiper/css/scrollbar';
+import "swiper/css/scrollbar";
 import { FreeMode, Scrollbar, Thumbs } from "swiper/modules";
 import { useState } from "react";
 import styles from "./newTrailerSwiper.module.scss";
@@ -66,7 +66,7 @@ const NewTrailersSwiper = ({ trailers }) => {
                         width="100%"
                         height="100%"
                         src={trailer}
-                        srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;object-fit:cover;height:100%;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:110px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=${trailer}/?autoplay=1><img src="${backGroundPoster}" alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
+                        srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;object-fit:cover;height:100%;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:50px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=${trailer}/?autoplay=1><img src="${backGroundPoster}" alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
                         {...iframeAttributes}
                       ></iframe>
                       <div className={styles.trailerSwiper__bottomInfo}>
@@ -108,7 +108,7 @@ const NewTrailersSwiper = ({ trailers }) => {
                     width="100%"
                     height="100%"
                     src={trailer}
-                    srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{height:1.5em;text-align:center;font:60px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=${trailer}/?autoplay=1><img src="${backGroundPoster}" alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
+                    srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{height:1.5em;text-align:center;font:30px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=${trailer}/?autoplay=1><img src="${backGroundPoster}" alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
                     {...iframeAttributes}
                   ></iframe>
                 </SwiperSlide>

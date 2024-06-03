@@ -5,7 +5,6 @@ import {
 } from "../../../../../interfaces/interfaces";
 import styles from "./popularCardsSwiper.module.scss";
 import "./popularCardsSwiper.scss";
-import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -25,6 +24,32 @@ const PopularCardsSwiper = ({
       navigation={true}
       modules={[Pagination, Navigation]}
       className="popularSwiper"
+      breakpoints={{
+        375: {
+          slidesPerView: 2.2,
+          centeredSlides: true,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 2.5,
+          centeredSlides: true,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+          centeredSlides: true,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 4,
+        },
+        1920: {
+          slidesPerView: 4,
+        },
+      }}
     >
       <div className={styles.cards}>
         <div className={styles.cards__body}>
@@ -40,10 +65,9 @@ const PopularCardsSwiper = ({
                 id,
                 vote_average,
               }: INowInCinemaCards) => (
-                <SwiperSlide>
+                <SwiperSlide key={id}>
                   <FilmCard
                     id={id}
-                    key={id}
                     name={title}
                     img={poster_path}
                     genre={genre}

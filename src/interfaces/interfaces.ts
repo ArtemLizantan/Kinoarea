@@ -138,3 +138,9 @@ export interface IMovieServicesGetFilmProps {
   value: string | number;
   limitOfCards: number;
 }
+
+export interface FormFooterComponentProps {
+  setErrorInput: React.Dispatch<React.SetStateAction<boolean>>;
+  errorInput: boolean;
+  isSubmitting: boolean;
+}

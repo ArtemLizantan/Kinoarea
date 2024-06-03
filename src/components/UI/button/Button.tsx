@@ -3,13 +3,16 @@ interface IBtn {
   text: string;
   background: string;
   type: "submit" | "reset" | "button" | undefined;
+  disabled?: boolean;
+  color: string;
 }
 
-const Button = ({ text, background, type }: IBtn) => {
+const Button = ({ text, background, color, type, disabled }: IBtn) => {
   return (
     <button
+      disabled={disabled}
       type={type}
-      style={{ background: background }}
+      style={{ background: background, color: color }}
       className={styles.btn}
     >
       {text}
