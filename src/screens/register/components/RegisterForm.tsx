@@ -1,18 +1,17 @@
 import { Formik, Form, Field, useFormikContext } from "formik";
 import { initialValues, schemas } from "./helper";
-import styles from "./loginForm.module.scss";
+import styles from "./registerForm.module.scss";
 import { FormFooterComponentProps } from "../../../interfaces/interfaces";
 import Button from "../../../components/UI/button/Button";
-import Links from "../../../components/UI/link/Link";
 import ErrorInput from "../../../components/UI/errorInput/ErrorInput";
-import { ROUTES } from "../../../routes";
+import { registerFormData } from "./registerFormData";
 
 interface FormValues {
   email: string;
   password: string;
 }
 
-const LoginForm: React.FC = () => {
+const RegisterForm: React.FC = () => {
   return (
     <Formik
       initialValues={initialValues}
@@ -27,7 +26,7 @@ const LoginForm: React.FC = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
 
 const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
   const formik = useFormikContext<FormValues>();
@@ -35,39 +34,26 @@ const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
   return (
     <Form className={styles.form}>
       <div className={styles.form__body}>
-        <div className={styles.form__inputWrapper}>
-          <Field
-            className={styles.form__input}
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            onBlur={formik.handleBlur}
-          />
-          <ErrorInput name="email" />
-        </div>
-        <div className={styles.form__inputWrapper}>
-          <Field
-            className={styles.form__input}
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-            onBlur={formik.handleBlur}
-          />
-          <ErrorInput name="password" />
-        </div>
+        {registerFormData.map(({ id, placeholder, type, name, error }) => (
+          <div key={id} className={styles.form__inputWrapper}>
+            <Field
+              className={styles.form__input}
+              type={type}
+              name={name}
+              placeholder={placeholder}
+              onBlur={formik.handleBlur}
+            />
+            <ErrorInput name={error} />
+          </div>
+        ))}
 
         <div className={styles.form__buttons}>
           <Button
             color="#151a26"
-            text="Login"
+            text="Register"
             disabled={isSubmitting}
             type="submit"
             background="#F2F60F"
-          />
-          <Links
-            background="var(--secondaryBlueColor)"
-            path={ROUTES.REGISTER}
-            text="Register"
           />
         </div>
       </div>

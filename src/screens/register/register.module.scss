@@ -1,0 +1,15 @@
+.register {
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 90px 0;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 34px;
+    width: 100%;
+  }
+}
