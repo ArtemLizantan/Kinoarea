@@ -10,8 +10,11 @@ const NowInCinema = () => {
   const { data, isLoading } = useQuery<IDataMovies[]>({
     queryKey: ["movies"],
     queryFn: async () => {
-      return new Promise((resolve) => {
-        moviesService.getFilms({ dbFirebase: "movies", limitOfCards: 10 }, resolve);
+      return new Promise((resolve: any) => {
+        moviesService.getFilms(
+          { dbFirebase: "movies", limitOfCards: 10 },
+          resolve
+        );
       });
     },
   });

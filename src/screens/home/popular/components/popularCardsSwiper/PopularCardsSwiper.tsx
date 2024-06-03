@@ -1,8 +1,5 @@
 import FilmCard from "../../../../../components/filmCard/FilmCard";
-import {
-  INowInCinemaCards,
-  INowInCinemaCardsProps,
-} from "../../../../../interfaces/interfaces";
+import { INowInCinemaCardsProps } from "../../../../../interfaces/interfaces";
 import styles from "./popularCardsSwiper.module.scss";
 import "./popularCardsSwiper.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -58,20 +55,14 @@ const PopularCardsSwiper = ({
           ) : (
             filteredCards &&
             filteredCards.map(
-              ({
-                title,
-                poster_path,
-                genre,
-                id,
-                vote_average,
-              }: INowInCinemaCards) => (
+              ({ title, poster_path, genre, id, vote_average }) => (
                 <SwiperSlide key={id}>
                   <FilmCard
                     id={id}
                     name={title}
                     img={poster_path}
-                    genre={genre}
-                    rating={vote_average}
+                    genre={[genre]}
+                    rating={Number(vote_average)}
                   />
                 </SwiperSlide>
               )

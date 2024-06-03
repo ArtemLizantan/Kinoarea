@@ -1,10 +1,11 @@
-import { Formik, Form, Field, ErrorMessage, useFormikContext } from "formik";
+import { Formik, Form, Field, useFormikContext } from "formik";
 import { useState } from "react";
 import axios from "axios";
 import Button from "../../../UI/button/Button";
 import { initialValues, schemas } from "./helper";
 import styles from "../newsLetter.module.scss";
 import { FormFooterComponentProps } from "../../../../interfaces/interfaces";
+import ErrorInput from "../../../UI/errorInput/ErrorInput";
 
 interface FormValues {
   email: string;
@@ -35,11 +36,7 @@ const FooterForm: React.FC = () => {
       }}
     >
       {({ isSubmitting }) => (
-        <FormFooterComponent
-          setErrorInput={setError}
-          errorInput={error}
-          isSubmitting={isSubmitting}
-        />
+        <FormFooterComponent isSubmitting={isSubmitting} />
       )}
     </Formik>
   );
@@ -47,20 +44,10 @@ const FooterForm: React.FC = () => {
 
 export default FooterForm;
 
-
 const FormFooterComponent: React.FC<FormFooterComponentProps> = ({
-  setErrorInput,
-  errorInput,
   isSubmitting,
 }) => {
   const formik = useFormikContext<FormValues>();
-
-  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    formik.handleChange(event);
-    if (errorInput && event.target.name === "email") {
-      setErrorInput(false);
-    }
-  };
 
   return (
     <Form className={styles.form__wrapper}>
@@ -71,9 +58,8 @@ const FormFooterComponent: React.FC<FormFooterComponentProps> = ({
           name="email"
           placeholder="Enter your email"
           onBlur={formik.handleBlur}
-          onChange={handleEmailChange}
         />
-        <ErrorMessage name="email" component="div" className={styles.error} />
+        <ErrorInput name="email" />
       </div>
       <Button
         color="#151a26"

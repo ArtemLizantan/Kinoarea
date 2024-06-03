@@ -1,3 +1,4 @@
+import { WhereFilterOp } from "firebase/firestore";
 import { MouseEventHandler } from "react";
 
 export interface IIcons {
@@ -51,7 +52,7 @@ export interface INowInCinemaCards {
   poster_path: string;
   genre: string;
   id: number;
-  vote_average: number | string;
+  vote_average: number;
 }
 
 export interface IDataMovies {
@@ -133,14 +134,12 @@ export interface IframeAttributes {
 
 export interface IMovieServicesGetFilmProps {
   dbFirebase: string;
-  field: string;
-  options: string;
-  value: string | number;
+  field?: string;
+  options?: WhereFilterOp;
+  value?: string | number | boolean;
   limitOfCards: number;
 }
 
 export interface FormFooterComponentProps {
-  setErrorInput: React.Dispatch<React.SetStateAction<boolean>>;
-  errorInput: boolean;
   isSubmitting: boolean;
 }

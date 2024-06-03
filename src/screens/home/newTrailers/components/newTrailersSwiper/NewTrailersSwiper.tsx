@@ -97,9 +97,6 @@ const NewTrailersSwiper = ({ trailers }) => {
             watchSlidesProgress={true}
             modules={[FreeMode, Thumbs, Scrollbar]}
             className="trailers-swiper2"
-            // scrollbar={{
-            //   hide: false,
-            // }}
           >
             {trailers &&
               trailers.map(({ backGroundPoster, trailer, id }: IDataMovies) => (

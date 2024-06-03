@@ -1,14 +1,26 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
+interface MoviesContextType {
+  tabsDataNowInCinema: string;
+  setTabsDataNowInCinema: React.Dispatch<React.SetStateAction<string>>;
+  tabsDataPopular: string;
+  setTabsDataPopular: React.Dispatch<React.SetStateAction<string>>;
+}
+
 interface MyComponentProps {
   children: ReactNode;
 }
 
-const MoviesContext = createContext({});
+const MoviesContext = createContext<MoviesContextType>({
+  tabsDataNowInCinema: "All",
+  setTabsDataNowInCinema: () => {},
+  tabsDataPopular: "All",
+  setTabsDataPopular: () => {},
+});
 
 export const MoviesProvider = ({ children }: MyComponentProps) => {
-  const [tabsDataNowInCinema, setTabsDataNowInCinema] = useState<string>("All");
-  const [tabsDataPopular, setTabsDataPopular] = useState<string>("All");
+  const [tabsDataNowInCinema, setTabsDataNowInCinema] = useState("All");
+  const [tabsDataPopular, setTabsDataPopular] = useState("All");
 
   const contextValue = {
     tabsDataNowInCinema,
@@ -16,8 +28,6 @@ export const MoviesProvider = ({ children }: MyComponentProps) => {
     tabsDataPopular,
     setTabsDataPopular,
   };
-
-  console.log(contextValue);
 
   return (
     <MoviesContext.Provider value={contextValue}>
@@ -29,7 +39,7 @@ export const MoviesProvider = ({ children }: MyComponentProps) => {
 export const useMovies = () => {
   const context = useContext(MoviesContext);
   if (!context) {
-    throw new Error("useMovies must be used within a FiltersProvider");
+    throw new Error("useMovies must be used within a MoviesProvider");
   }
   return context;
 };

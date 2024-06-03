@@ -6,7 +6,7 @@ import { useState } from "react";
 import Title from "../title/Title";
 import Tabs from "../tabs/Tabs";
 
-const CardsTop = ({ tabsData, setTabsData, array ,nameTitle}) => {
+const CardsTop = ({ tabsData, setTabsData, array, nameTitle }) => {
   const { ref, width } = useResizeObserver<HTMLDivElement>();
   const [openMenu, setOpenMenu] = useState(false);
 
