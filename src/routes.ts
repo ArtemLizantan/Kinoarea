@@ -3,4 +3,5 @@ export const ROUTES = {
   LOGIN: "/login",
   REGISTER: "/register",
   MOVIE: `/movie`,
+  PRIVACY_POLICY: "/privacy-policy",
 };

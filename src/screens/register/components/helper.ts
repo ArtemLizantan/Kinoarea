@@ -6,6 +6,8 @@ export const initialValues = {
   login: "",
   newpassword: "",
   repeatpassword: "",
+  checked: false,
+  checked1: false,
 };
 
 const regx = {
@@ -27,5 +29,11 @@ export const schemas = {
     repeatpassword: Yup.string()
       .oneOf([Yup.ref("newpassword")], "Passwords must match")
       .required("Repeat password is required"),
+    checked: Yup.bool()
+      .oneOf([true], "You must accept the politic") // Add the checkbox validation
+      .required("Checkbox is required"),
+    checked1: Yup.bool()
+      .oneOf([true], "You must accept the personal data") // Add the checkbox validation
+      .required("Checkbox is required"),
   }),
 };

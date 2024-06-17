@@ -1,0 +1,24 @@
+.ant-checkbox-wrapper {
+  color: var(--whiteColor);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #fff;
+  a {
+    text-decoration: underline;
+    color: var(--yellowColor);
+    text-decoration-skip-ink: none;
+    cursor: pointer;
+  }
+}
+
+.ant-checkbox-checked {
+  .ant-checkbox-inner {
+    background-color: var(--yellowColor);
+    border-color: var(--yellowColor);
+    &::after {
+      border-bottom: 2px solid var(--secondaryTextColor);
+      border-right: 2px solid var(--secondaryTextColor);
+    }
+  }
+}

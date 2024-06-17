@@ -6,6 +6,7 @@ import Button from "../../../components/UI/button/Button";
 import Links from "../../../components/UI/link/Link";
 import ErrorInput from "../../../components/UI/errorInput/ErrorInput";
 import { ROUTES } from "../../../routes";
+import CheckboxComponent from "../../../components/UI/checkbox/Checkbox";
 
 interface FormValues {
   email: string;
