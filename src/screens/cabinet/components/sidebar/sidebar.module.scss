@@ -1,0 +1,21 @@
+.sidebar {
+  max-width: 107px;
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    a {
+      width: 107px;
+      height: 104px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondaryBlueColor);
+      svg {
+        width: 30px;
+        height: 30px;
+        color: var(--whiteColor);
+      }
+    }
+  }
+}

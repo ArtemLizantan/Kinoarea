@@ -8,6 +8,7 @@ import Login from "./screens/login/Login";
 import Register from "./screens/register/Register";
 import InfoCard from "./screens/moviePage/MoviePage";
 import { useEffect } from "react";
+import Cabinet from "./screens/cabinet/Cabinet";
 
 function App() {
   const { pathname } = useLocation();
@@ -25,6 +26,8 @@ function App() {
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.REGISTER} element={<Register />} />
           <Route path={`${ROUTES.MOVIE}/:id`} element={<InfoCard />} />
+
+          <Route path={ROUTES.CABINET} element={<Cabinet />} />
         </Routes>
       </Layout>
       <Footer />
