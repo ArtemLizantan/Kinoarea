@@ -24,12 +24,12 @@ const PopularCardsSwiper = ({
       breakpoints={{
         375: {
           slidesPerView: 2.2,
-          centeredSlides: true,
+
           spaceBetween: 10,
         },
         480: {
           slidesPerView: 2.5,
-          centeredSlides: true,
+
           spaceBetween: 20,
         },
         768: {
@@ -37,7 +37,6 @@ const PopularCardsSwiper = ({
         },
         1024: {
           slidesPerView: 3,
-          centeredSlides: true,
           spaceBetween: 20,
         },
         1440: {

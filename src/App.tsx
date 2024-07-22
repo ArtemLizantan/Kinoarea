@@ -26,7 +26,6 @@ function App() {
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.REGISTER} element={<Register />} />
           <Route path={`${ROUTES.MOVIE}/:id`} element={<InfoCard />} />
-
           <Route path={ROUTES.CABINET} element={<Cabinet />} />
         </Routes>
       </Layout>

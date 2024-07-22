@@ -8,6 +8,7 @@ import MovieTable from "./components/movieTable/MovieTable";
 import MovieMainRoles from "./components/movieMainRoles/MovieMainRoles";
 import MoviePhotos from "./components/moviePhotos/MoviePhotos";
 import MovieSimilar from "./components/movieSimilar/MovieSimilar";
+import Container from "../../components/container/Container";
 
 const InfoCard = () => {
   const { id } = useParams();
@@ -25,31 +26,33 @@ const InfoCard = () => {
     <div>Loading...</div>
   ) : (
     <section className={styles.moviePage}>
-      <div className={styles.moviePage__body}>
-        <div className={styles.moviePage__top}>
-          <MainInfoCard
-            id={movie?.id}
-            poster={movie?.poster_path}
-            desc={movie?.overview}
-            rating={movie?.vote_average}
-            title={movie?.title}
-            slogan={movie?.slogan}
-            backGroundPoster={movie?.backGroundPoster}
-            trailer={movie?.trailer}
-          />
-          <MovieLike />
-          <MovieTable movie={movie} />
+      <Container>
+        <div className={styles.moviePage__body}>
+          <div className={styles.moviePage__top}>
+            <MainInfoCard
+              id={movie?.id}
+              poster={movie?.poster_path}
+              desc={movie?.overview}
+              rating={movie?.vote_average}
+              title={movie?.title}
+              slogan={movie?.slogan}
+              backGroundPoster={movie?.backGroundPoster}
+              trailer={movie?.trailer}
+            />
+            <MovieLike />
+            <MovieTable movie={movie} />
+          </div>
+          <div className={styles.moviePage__actors}>
+            <MovieMainRoles nameFilm={movie?.title} />
+          </div>
+          <div className={styles.moviePage__photos}>
+            <MoviePhotos array={movie?.frames} />
+          </div>
+          <div className={styles.moviePage__similar}>
+            <MovieSimilar genreFilm={movie?.genre.join()} />
+          </div>
         </div>
-        <div className={styles.moviePage__actors}>
-          <MovieMainRoles nameFilm={movie?.title} />
-        </div>
-        <div className={styles.moviePage__photos}>
-          <MoviePhotos array={movie?.frames} />
-        </div>
-        <div className={styles.moviePage__similar}>
-          <MovieSimilar genreFilm={movie?.genre.join()} />
-        </div>
-      </div>
+      </Container>
     </section>
   );
 };
