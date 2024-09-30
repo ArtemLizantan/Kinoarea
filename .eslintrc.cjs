@@ -10,6 +10,8 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh", "tailwindcss"],
   rules: {
+    "no-console": "off",
+    "react/react-in-jsx-scope": "off",
     "tailwindcss/no-custom-classname": "off",
     "react-refresh/only-export-components": [
       "warn",
