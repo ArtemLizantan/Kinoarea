@@ -21,7 +21,7 @@ function App() {
     <div className="wrapper">
       <Header />
       <Layout>
-        <Routes location={location} key={location.pathname}>
+        <Routes >
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.REGISTER} element={<Register />} />
