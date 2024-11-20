@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import React, { ReactNode, createContext, useContext, useState } from "react";
 
 interface MoviesContextType {
   tabsDataNowInCinema: string;

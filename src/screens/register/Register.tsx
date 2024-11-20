@@ -1,3 +1,4 @@
+import React from "react";
 import Title from "../../components/title/Title";
 import RegisterForm from "./components/RegisterForm";
 import styles from "./register.module.scss";

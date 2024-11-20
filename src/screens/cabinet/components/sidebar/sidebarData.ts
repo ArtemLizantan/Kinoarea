@@ -1,11 +1,8 @@
-import { FaHome } from "react-icons/fa";
-import { TbUsers } from "react-icons/tb";
-import { FaComments } from "react-icons/fa";
-import { MdGrade } from "react-icons/md";
-import { MdOutlineReviews } from "react-icons/md";
-import { MdLocalMovies } from "react-icons/md";
-import { BsPersonHeart } from "react-icons/bs";
 import { IconType } from "react-icons";
+import { BsPersonHeart } from "react-icons/bs";
+import { FaComments, FaHome } from "react-icons/fa";
+import { MdGrade, MdLocalMovies, MdOutlineReviews } from "react-icons/md";
+import { TbUsers } from "react-icons/tb";
 import { ROUTESCABINET } from "../../../../routes";
 
 interface SidebarItem {

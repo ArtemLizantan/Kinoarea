@@ -9,9 +9,7 @@ import SocialLinks from "./components/socialLinks/SocialLinks";
 import styles from "./header.module.scss";
 import useResizeObserver from "use-resize-observer";
 import { SlSocialVkontakte } from "react-icons/sl";
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { IIcons, INavLink } from "../../interfaces/interfaces";
 import { ROUTES } from "../../routes";
 

@@ -1,19 +1,35 @@
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
+  env: {
+    browser: true,
+    es2021: true,
+  },
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended", // Рекомендации для TypeScript
+    "standard",
+    "prettier", // Prettier должен быть последним
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["react-refresh", "tailwindcss"],
+  parser: "@typescript-eslint/parser", // Используем TypeScript парсер
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2021,
+    sourceType: "module",
+  },
+  plugins: [
+    "react",
+    "@typescript-eslint", // Поддержка TypeScript
+    "prettier",
+  ],
   rules: {
-    "tailwindcss/no-custom-classname": "off",
-    "react-refresh/only-export-components": [
-      "warn",
-      { allowConstantExport: true },
-    ],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/jsx-uses-react": "off",
+    "react/jsx-uses-vars": "error",
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-unused-vars": ["error"], // Проверка неиспользуемых переменных в TS
+    "@typescript-eslint/no-explicit-any": "warn", // Предупреждение при использовании `any`
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Отключение необходимости явно указывать типы функций
   },
 };

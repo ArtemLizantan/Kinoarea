@@ -5,6 +5,7 @@ export const ROUTES = {
   MOVIE: `/movie`,
   PRIVACY_POLICY: "/privacy-policy",
   CABINET: "/cabinet",
+  SEARCH: "/search",
 };
 
 export const ROUTESCABINET = {

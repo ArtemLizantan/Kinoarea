@@ -1,12 +1,12 @@
-import { Formik, Form, Field, useFormikContext } from "formik";
+import React from "react";
+import { Field, Form, Formik, useFormikContext } from "formik";
+import Button from "../../../components/UI/button/Button";
+import ErrorInput from "../../../components/UI/errorInput/ErrorInput";
+import Links from "../../../components/UI/link/Link";
+import { FormFooterComponentProps } from "../../../interfaces/interfaces";
+import { ROUTES } from "../../../routes";
 import { initialValues, schemas } from "./helper";
 import styles from "./loginForm.module.scss";
-import { FormFooterComponentProps } from "../../../interfaces/interfaces";
-import Button from "../../../components/UI/button/Button";
-import Links from "../../../components/UI/link/Link";
-import ErrorInput from "../../../components/UI/errorInput/ErrorInput";
-import { ROUTES } from "../../../routes";
-import CheckboxComponent from "../../../components/UI/checkbox/Checkbox";
 
 interface FormValues {
   email: string;

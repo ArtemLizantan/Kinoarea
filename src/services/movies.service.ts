@@ -28,7 +28,7 @@ class MoviesServices {
       value,
       limitOfCards,
     }: IMovieServicesGetFilmProps,
-    callback: GetFilmsCallback
+    callback: GetFilmsCallback,
   ): Promise<void> {
     const constraints: QueryConstraint[] = [
       field && where(field, options as WhereFilterOp, value),
@@ -50,7 +50,7 @@ class MoviesServices {
   }): Promise<MovieData[]> {
     const actors: MovieData[] = [];
     const querySnapshot = await getDocs(
-      collection(db, "movies", nameFilm, "actors")
+      collection(db, "movies", nameFilm, "actors"),
     );
 
     querySnapshot.forEach((doc) => {

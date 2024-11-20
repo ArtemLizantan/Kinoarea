@@ -64,7 +64,7 @@ const PopularCardsSwiper = ({
                     rating={Number(vote_average)}
                   />
                 </SwiperSlide>
-              )
+              ),
             )
           )}
         </div>

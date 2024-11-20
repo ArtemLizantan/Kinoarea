@@ -82,26 +82,26 @@ const MainInfoCard = ({
           )}
         </div>
       </div>
-        {tablet && (
-            <div className={styles.cardInfoRight__bottom}>
-              <div className={styles.cardInfoRight__bottomLeft}>
-                <MovieTrailerButton
-                  onClick={showModal}
-                  text={"watch the trailer"}
-                />
-              </div>
-              <div className={styles.cardInfoRight__bottomRight}>
-                <SocialLinks array={icons} />
-              </div>
-            </div>
-          )}
+      {tablet && (
+        <div className={styles.cardInfoRight__bottom}>
+          <div className={styles.cardInfoRight__bottomLeft}>
+            <MovieTrailerButton
+              onClick={showModal}
+              text={"watch the trailer"}
+            />
+          </div>
+          <div className={styles.cardInfoRight__bottomRight}>
+            <SocialLinks array={icons} />
+          </div>
+        </div>
+      )}
       <Popup isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
         <iframe
           width="100%"
           height="600px"
           src={trailer}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen

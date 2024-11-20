@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 const MovieSimilar = ({ genreFilm }: { genreFilm: string | undefined }) => {
   const { id } = useParams();
   const [numberFromId, setNumberFromId] = useState(
-    Number(id?.match(/\d+/)?.[0])
+    Number(id?.match(/\d+/)?.[0]),
   );
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const MovieSimilar = ({ genreFilm }: { genreFilm: string | undefined }) => {
             value: genreFilm,
             limitOfCards: 5,
           },
-          resolve
+          resolve,
         );
       });
     },
@@ -56,7 +56,7 @@ const MovieSimilar = ({ genreFilm }: { genreFilm: string | undefined }) => {
                 genre={genre}
                 rating={vote_average}
               />
-            )
+            ),
           )}
         </div>
       </div>

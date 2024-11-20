@@ -79,7 +79,7 @@ const MovieTable = ({ movie }: IMovieTableProps) => {
                       </div>
                     </li>
                   </React.Fragment>
-                )
+                ),
               )}
             </ul>
             <ul className={styles.movieTable__column}>
@@ -152,7 +152,7 @@ const MovieTable = ({ movie }: IMovieTableProps) => {
                       </div>
                     </li>
                   </React.Fragment>
-                )
+                ),
               )}
             </ul>
           </div>

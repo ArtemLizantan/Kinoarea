@@ -24,7 +24,7 @@ async function uploadMoviesWithActors() {
 
     // Добавляем актеров к подколлекции "actors" у каждого фильма
     const actorsInMovie = actors.filter((actor) =>
-      actor.movies.includes(movie.title)
+      actor.movies.includes(movie.title),
     );
     actorsInMovie.forEach((actor) => {
       const actorDocRef = actorsCollectionRef.doc(actor.name);

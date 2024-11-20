@@ -58,7 +58,7 @@ const NewTrailersSwiper = ({ trailers }) => {
               trailers.map(
                 (
                   { title, backGroundPoster, trailer, id }: IDataMovies,
-                  index
+                  index,
                 ) => (
                   <SwiperSlide key={`${id}-${index}`}>
                     <div className={styles.trailerSwiper__wrapperSlide}>
@@ -66,7 +66,7 @@ const NewTrailersSwiper = ({ trailers }) => {
                         width="100%"
                         height="100%"
                         src={trailer}
-                        srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;object-fit:cover;height:100%;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:50px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=${trailer}/?autoplay=1><img src="${backGroundPoster}" alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
+                        srcDoc={`<style>*{padding[]:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;object-fit:cover;height:100%;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:50px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=${trailer}/?autoplay=1><img src="${backGroundPoster}" alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
                         {...iframeAttributes}
                       ></iframe>
                       <div className={styles.trailerSwiper__bottomInfo}>
@@ -83,7 +83,7 @@ const NewTrailersSwiper = ({ trailers }) => {
                       </div>
                     </div>
                   </SwiperSlide>
-                )
+                ),
               )}
           </Swiper>
         </div>

@@ -19,7 +19,7 @@ const Popular = () => {
             options: ">",
             value: "7.4",
           },
-          resolve
+          resolve,
         );
       });
     },

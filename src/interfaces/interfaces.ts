@@ -1,5 +1,5 @@
 import { WhereFilterOp } from "firebase/firestore";
-import { MouseEventHandler } from "react";
+import React, { MouseEventHandler } from "react";
 
 export interface IIcons {
   name: React.ReactNode;

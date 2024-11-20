@@ -9,9 +9,9 @@ import { useEffect, useState } from "react";
 const MovieMainRoles = ({ nameFilm }: { nameFilm: string | undefined }) => {
   const { id } = useParams();
   const [numberFromId, setNumberFromId] = useState(
-    Number(id?.match(/\d+/)?.[0])
+    Number(id?.match(/\d+/)?.[0]),
   );
-  //новый кеш для актеров каждого фильма
+
   const [key, setKey] = useState(`moviesActors${numberFromId}`);
 
   useEffect(() => {
