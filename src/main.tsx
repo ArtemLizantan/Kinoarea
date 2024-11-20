@@ -17,7 +17,7 @@ const queryClient = new QueryClient({
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Kinoarea/">
     <Provider store={store}>
       <MoviesProvider>
         <QueryClientProvider client={queryClient}>
