@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-
-kinoarea-c2393-firebase-adminsdk-g9fyw-bb867b6219.json
+.env.production
+kinoarea-c2393-firebase-adminsdk-g9fyw-3867b4d7c1
 .env
