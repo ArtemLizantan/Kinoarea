@@ -16,11 +16,13 @@ const Popular = () => {
           {
             dbFirebase: "movies",
             limitOfCards: 24,
-            field: "vote_average",
+            field: "voteAverage",
             options: ">",
             value: "7.4",
           },
-          resolve,
+          (moviesData) => {
+            resolve(moviesData as IDataMovies[]);
+          },
         );
       });
     },

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import ButtonHoweredCard from "../../../../components/UI/buttonHoweredCard/ButtonHoweredCard";
 import Title from "../../../../components/title/Title";
 import myStyles from "./moviePhotos.module.scss";
 import PopupSwiper from "../../../../components/popupSwiper/PopupSwiper";
+import Button from "../../../../components/UI/Button";
 
 const MoviePhotos = ({ array }: { array: string[] | undefined }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,10 +20,12 @@ const MoviePhotos = ({ array }: { array: string[] | undefined }) => {
             <Title text={"Photos from movie"} />
           </div>
           <div className={myStyles.photos__bottom}>
-            {limitedPhotos != undefined &&
+            {limitedPhotos !== undefined &&
               limitedPhotos.map((img: string) => (
                 <div key={img} className={myStyles.photos__item}>
-                  <div className={myStyles.photos__hovered}></div>
+                  <div className={myStyles.photos__hovered}>
+                    <Button onClick={showModal} text="Look all photos" />
+                  </div>
                   <img src={img} alt="photo" />
                 </div>
               ))}

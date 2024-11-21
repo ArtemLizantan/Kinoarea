@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import Title from "../../../components/title/Title";
 import NewTrailersSwiper from "./components/newTrailersSwiper/NewTrailersSwiper";
 import styles from "./newTrailers.module.scss";
-import { IDataMovies } from "../../../interfaces/interfaces";
+import { IDataMovies, ITrailers } from "../../../interfaces/interfaces";
 import { useEffect, useState } from "react";
 import Container from "../../../components/container/Container";
 
@@ -11,7 +11,9 @@ const NewTrailers = () => {
     queryKey: ["movies"],
   });
 
-  const [arrayTrailersFromMovies, setArrayTrailersFromMovies] = useState([]);
+  const [arrayTrailersFromMovies, setArrayTrailersFromMovies] = useState<
+    ITrailers[]
+  >([]);
 
   useEffect(() => {
     if (data) {
@@ -26,8 +28,6 @@ const NewTrailers = () => {
       setArrayTrailersFromMovies(modifiedData);
     }
   }, [data]);
-
-  console.log(arrayTrailersFromMovies);
 
   return (
     <section>

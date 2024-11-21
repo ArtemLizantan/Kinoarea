@@ -20,36 +20,40 @@ const InfoCard = () => {
 
   const movie = data?.find((item) => item.id === Number(numberFromId));
 
-  return data === undefined ? (
-    <div>Nothing</div>
-  ) : isLoading ? (
-    <div>Loading...</div>
-  ) : (
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!movie) {
+    return <div>Movie not found</div>;
+  }
+
+  return (
     <section className={styles.moviePage}>
       <Container>
         <div className={styles.moviePage__body}>
           <div className={styles.moviePage__top}>
             <MainInfoCard
-              id={movie?.id}
-              poster={movie?.poster_path}
-              desc={movie?.overview}
-              rating={movie?.vote_average}
-              title={movie?.title}
-              slogan={movie?.slogan}
-              backGroundPoster={movie?.backGroundPoster}
-              trailer={movie?.trailer}
+              id={movie.id}
+              poster={movie.posterPath}
+              desc={movie.overview}
+              rating={movie.voteAverage}
+              title={movie.title}
+              slogan={movie.slogan}
+              backGroundPoster={movie.backGroundPoster}
+              trailer={movie.trailer}
             />
             <MovieLike />
             <MovieTable movie={movie} />
           </div>
           <div className={styles.moviePage__actors}>
-            <MovieMainRoles nameFilm={movie?.title} />
+            <MovieMainRoles nameFilm={movie.title} />
           </div>
           <div className={styles.moviePage__photos}>
-            <MoviePhotos array={movie?.frames} />
+            <MoviePhotos array={movie.frames} />
           </div>
           <div className={styles.moviePage__similar}>
-            <MovieSimilar genreFilm={movie?.genre.join()} />
+            <MovieSimilar genreFilm={movie.genre.join()} />
           </div>
         </div>
       </Container>

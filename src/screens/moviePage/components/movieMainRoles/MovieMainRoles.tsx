@@ -1,28 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
 import styles from "./movieMainRoles.module.scss";
-import { IDataMovies } from "../../../../interfaces/interfaces";
-import moviesService from "../../../../services/movies.service";
+import moviesService, { MovieData } from "../../../../services/movies.service";
 import { Link, useParams } from "react-router-dom";
 import Title from "../../../../components/title/Title";
 import { useEffect, useState } from "react";
 
-const MovieMainRoles = ({ nameFilm }: { nameFilm: string | undefined }) => {
+const MovieMainRoles = ({ nameFilm }: { nameFilm: string }) => {
   const { id } = useParams();
-  const [numberFromId, setNumberFromId] = useState(
-    Number(id?.match(/\d+/)?.[0]),
-  );
 
-  const [key, setKey] = useState(`moviesActors${numberFromId}`);
+  const [key, setKey] = useState(`moviesActors${id}`);
 
   useEffect(() => {
     if (id) {
       const newNumberFromId = Number(id.match(/\d+/)?.[0]);
-      setNumberFromId(newNumberFromId);
       setKey(`moviesActors${newNumberFromId}`);
     }
   }, [id]);
 
-  const { data } = useQuery<IDataMovies[]>({
+  const { data } = useQuery<MovieData[]>({
     queryKey: [key],
     queryFn: async () => {
       return moviesService.getRolesInMovies({ nameFilm });
@@ -36,7 +31,7 @@ const MovieMainRoles = ({ nameFilm }: { nameFilm: string | undefined }) => {
           <Title text={"In main roles:"} />
         </div>
         <div className={styles.roles__bottom}>
-          {data?.map(({ img, name }) => (
+          {data?.map(({ img, name }: MovieData) => (
             <Link to={"/"} key={name} className={styles.roles__card}>
               <div className={styles.roles__img}>
                 <img src={img} alt="photoArtist" />

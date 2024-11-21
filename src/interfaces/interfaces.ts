@@ -30,7 +30,7 @@ export interface ICardMovieProps {
   name: string;
   genre: string[];
   id: number;
-  rating?: number;
+  rating?: string;
 }
 
 export interface ITabs {
@@ -75,7 +75,7 @@ export interface IDataMovies {
   title: string;
   age_rating: string;
   overview: string;
-  genre: string;
+  genre: string[];
   writers: string[];
   composer: string;
   frames: string[];
@@ -90,7 +90,7 @@ export interface INowInCinemaCardsProps {
 export interface IMainInfoCardProps {
   poster: string | undefined;
   title: string | undefined;
-  rating: number | undefined;
+  rating: string | undefined;
   desc: string | undefined;
   id: number | undefined;
   slogan: string | undefined;
@@ -142,4 +142,15 @@ export interface IMovieServicesGetFilmProps {
 
 export interface FormFooterComponentProps {
   isSubmitting: boolean;
+}
+
+export interface ITrailers {
+  title: string;
+  backGroundPoster: string;
+  trailer: string;
+  id: number;
+}
+
+export interface ITrailersProps {
+  trailers: IDataMovies[]; // This should be an array of IDataMovies
 }

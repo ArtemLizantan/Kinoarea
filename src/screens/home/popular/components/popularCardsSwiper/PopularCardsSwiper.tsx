@@ -54,14 +54,14 @@ const PopularCardsSwiper = ({
           ) : (
             filteredCards &&
             filteredCards.map(
-              ({ title, poster_path, genre, id, vote_average }) => (
+              ({ title, posterPath, genre, id, voteAverage }) => (
                 <SwiperSlide key={id}>
                   <FilmCard
                     id={id}
                     name={title}
-                    img={poster_path}
+                    img={posterPath}
                     genre={[genre]}
-                    rating={Number(vote_average)}
+                    rating={Number(voteAverage)}
                   />
                 </SwiperSlide>
               ),

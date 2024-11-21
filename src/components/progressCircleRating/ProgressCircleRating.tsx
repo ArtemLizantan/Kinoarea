@@ -45,12 +45,13 @@ const Text: React.FC<TextProps> = ({ rating }) => {
 };
 
 interface PieProps {
-  rating: number;
+  rating: string;
   colour: string;
 }
 
 const Pie: React.FC<PieProps> = ({ rating, colour }) => {
-  const cleanedRating = Math.min(Math.max(rating, 0), 10);
+  const ratingNum = Number(rating);
+  const cleanedRating = Math.min(Math.max(ratingNum, 0), 10);
 
   return (
     <svg width={60} height={60}>
@@ -64,7 +65,7 @@ const Pie: React.FC<PieProps> = ({ rating, colour }) => {
 };
 
 interface ProgressCircleRatingProps {
-  rating?: number;
+  rating?: string;
 }
 
 const ProgressCircleRating: React.FC<ProgressCircleRatingProps> = ({

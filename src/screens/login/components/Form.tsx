@@ -1,12 +1,10 @@
 import React from "react";
 import { Field, Form, Formik, useFormikContext } from "formik";
-import Button from "../../../components/UI/button/Button";
 import ErrorInput from "../../../components/UI/errorInput/ErrorInput";
-import Links from "../../../components/UI/link/Link";
 import { FormFooterComponentProps } from "../../../interfaces/interfaces";
-import { ROUTES } from "../../../routes";
 import { initialValues, schemas } from "./helper";
 import styles from "./loginForm.module.scss";
+import Button from "../../../components/UI/Button";
 
 interface FormValues {
   email: string;
@@ -20,6 +18,7 @@ const LoginForm: React.FC = () => {
       validationSchema={schemas.custom}
       onSubmit={async () => {
         try {
+          /* empty */
         } catch (error) {}
       }}
     >
@@ -58,11 +57,7 @@ const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
         </div>
 
         <div className={styles.form__buttons}>
-          <Links
-            background="var(--secondaryBlueColor)"
-            path={ROUTES.REGISTER}
-            text="Register"
-          />
+          <Button type="submit" text="Login" background="#f2f60f" />
         </div>
       </div>
     </Form>

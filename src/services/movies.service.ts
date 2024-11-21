@@ -11,8 +11,10 @@ import {
   WhereFilterOp,
 } from "firebase/firestore";
 
-interface MovieData {
-  [key: string]: any; // Define more specific properties if possible
+export interface MovieData {
+  [key: string]: any;
+  img: string;
+  name: string;
 }
 
 interface GetFilmsCallback {

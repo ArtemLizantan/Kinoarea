@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React from "react";
 import styles from "./movieTable.module.scss";
 import { IMovieTableProps } from "../../../../interfaces/interfaces";
@@ -43,7 +44,7 @@ const MovieTable = ({ movie }: IMovieTableProps) => {
                         Slogan:
                       </div>
                       <div className={styles.movieTable__columnRight}>
-                        "{slogan}"
+                        &apos; {slogan}&apos;
                       </div>
                     </li>
                     <li className={styles.movieTable__columnItem}>
@@ -90,7 +91,7 @@ const MovieTable = ({ movie }: IMovieTableProps) => {
                   worldwide_revenue,
                   age_rating,
                   release_date,
-                  vote_average,
+                  voteAverage,
                   id,
                   duration,
                 }) => (
@@ -140,7 +141,7 @@ const MovieTable = ({ movie }: IMovieTableProps) => {
                         Vote average:
                       </div>
                       <div className={styles.movieTable__columnRight}>
-                        {vote_average}
+                        {voteAverage}
                       </div>
                     </li>
                     <li className={styles.movieTable__columnItem}>

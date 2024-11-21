@@ -17,7 +17,7 @@ const MovieSimilar = ({ genreFilm }: { genreFilm: string | undefined }) => {
     setNumberFromId(Number(id?.match(/\d+/)?.[0]));
   }, [id]);
 
-  const { data, isLoading } = useQuery<IDataMovies[]>({
+  const { data } = useQuery<IDataMovies[]>({
     queryKey: ["additionalMovies"],
     queryFn: async () => {
       return new Promise((resolve) => {
@@ -29,7 +29,9 @@ const MovieSimilar = ({ genreFilm }: { genreFilm: string | undefined }) => {
             value: genreFilm,
             limitOfCards: 5,
           },
-          resolve,
+          (moviesData) => {
+            resolve(moviesData as unknown as IDataMovies[]);
+          },
         );
       });
     },
@@ -47,14 +49,14 @@ const MovieSimilar = ({ genreFilm }: { genreFilm: string | undefined }) => {
         </div>
         <div className={styles.similar__bottom}>
           {filteredData?.map(
-            ({ title, poster_path, genre, id, vote_average }) => (
+            ({ title, posterPath, genre, id, voteAverage }) => (
               <FilmCard
                 id={id}
                 key={id}
                 name={title}
-                img={poster_path}
+                img={posterPath}
                 genre={genre}
-                rating={vote_average}
+                rating={voteAverage}
               />
             ),
           )}

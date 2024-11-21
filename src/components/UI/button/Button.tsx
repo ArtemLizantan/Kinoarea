@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
 import "./button.scss";
 import { Link } from "react-router-dom";
@@ -10,6 +10,7 @@ interface IBtn {
   disabled?: boolean;
   color?: string;
   route?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // Correct function type
 }
 
 const Button = ({
@@ -19,6 +20,7 @@ const Button = ({
   text,
   type,
   disabled,
+  onClick,
 }: IBtn) => {
   const hoverRef = useRef(null);
   const buttonRef = useRef(null);
@@ -93,6 +95,7 @@ const Button = ({
     </Link>
   ) : (
     <button
+      onClick={onClick}
       type={type}
       className={`link ${isActive ? "active" : ""}`}
       style={{ background: background, color: color }}

@@ -3,11 +3,11 @@ import { Formik, Form, Field, useFormikContext } from "formik";
 import { initialValues, schemas } from "./helper";
 import styles from "./registerForm.module.scss";
 import { FormFooterComponentProps } from "../../../interfaces/interfaces";
-import Button from "../../../components/UI/button/Button";
 import ErrorInput from "../../../components/UI/errorInput/ErrorInput";
 import { registerFormData } from "./registerFormData";
 import { ROUTES } from "../../../routes";
 import { Link } from "react-router-dom";
+import Button from "../../../components/UI/Button";
 
 interface FormValues {
   email: string;
@@ -21,6 +21,7 @@ const RegisterForm: React.FC = () => {
       validationSchema={schemas.custom}
       onSubmit={async () => {
         try {
+          /* empty */
         } catch (error) {}
       }}
     >
@@ -65,14 +66,16 @@ const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
               <Field type="checkbox" name="checked1" value="One" />
               <span>
                 Соглашаюсь на обработку
-                <Link to={ROUTES.PRIVACY_POLICY}>персональных данных</Link>
+                <Link to={ROUTES.PRIVACY_POLICY}> персональных данных</Link>
               </span>
             </label>
             <ErrorInput name="checked1" />
           </div>
         </div>
 
-        <div className={styles.form__buttons}></div>
+        <div className={styles.form__buttons}>
+          <Button type="submit" text="Register" background="#f2f60f" />
+        </div>
       </div>
     </Form>
   );
