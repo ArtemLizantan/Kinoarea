@@ -5,6 +5,7 @@ import moviesService from "../../../services/movies.service";
 import PopularTop from "./components/popularTop/PopularTop";
 import styles from "./popular.module.scss";
 import PopularCardsSwiper from "./components/popularCardsSwiper/PopularCardsSwiper";
+import Container from "../../../components/container/Container";
 
 const Popular = () => {
   const { data, isLoading } = useQuery<IDataMovies[]>({
@@ -40,13 +41,15 @@ const Popular = () => {
   const limitedCards = filteredCards?.slice(0, 8);
   return (
     <section className={styles.nowcinema}>
-      <div className={styles.nowcinema__body}>
-        <PopularTop />
-        <PopularCardsSwiper
-          isLoading={isLoading}
-          filteredCards={limitedCards}
-        />
-      </div>
+      <Container>
+        <div className={styles.nowcinema__body}>
+          <PopularTop />
+          <PopularCardsSwiper
+            isLoading={isLoading}
+            filteredCards={limitedCards}
+          />
+        </div>
+      </Container>
     </section>
   );
 };

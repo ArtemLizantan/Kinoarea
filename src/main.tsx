@@ -17,7 +17,7 @@ const queryClient = new QueryClient({
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter basename="/Kinoarea/">
+  <BrowserRouter basename="/">
     <Provider store={store}>
       <MoviesProvider>
         <QueryClientProvider client={queryClient}>
@@ -26,5 +26,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </QueryClientProvider>
       </MoviesProvider>
     </Provider>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

@@ -23,12 +23,7 @@ const MoviePhotos = ({ array }: { array: string[] | undefined }) => {
             {limitedPhotos != undefined &&
               limitedPhotos.map((img: string) => (
                 <div key={img} className={myStyles.photos__item}>
-                  <div className={myStyles.photos__hovered}>
-                    <ButtonHoweredCard
-                      onClick={showModal}
-                      text={"Look all photos"}
-                    />
-                  </div>
+                  <div className={myStyles.photos__hovered}></div>
                   <img src={img} alt="photo" />
                 </div>
               ))}

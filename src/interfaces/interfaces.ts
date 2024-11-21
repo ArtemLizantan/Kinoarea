@@ -49,10 +49,10 @@ export interface ITabsProps {
 
 export interface INowInCinemaCards {
   title: string;
-  poster_path: string;
+  posterPath: string;
   genre: string;
   id: number;
-  vote_average: number;
+  voteAverage: string;
 }
 
 export interface IDataMovies {
@@ -62,7 +62,7 @@ export interface IDataMovies {
   cinematographer: string;
   slogan: string;
   duration: string;
-  vote_average: string;
+  voteAverage: string;
   year: string;
   premiere_date: string;
   artist: string;
@@ -71,7 +71,7 @@ export interface IDataMovies {
   directors: string[];
   id: number;
   country: string;
-  poster_path: string;
+  posterPath: string;
   title: string;
   age_rating: string;
   overview: string;
@@ -119,7 +119,7 @@ export interface IMovieTableProps {
     worldwide_revenue: string;
     age_rating: string;
     release_date: string;
-    vote_average: string;
+    voteAverage: string;
     duration: string;
   };
 }

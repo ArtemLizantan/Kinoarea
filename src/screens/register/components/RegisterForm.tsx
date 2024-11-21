@@ -72,15 +72,7 @@ const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
           </div>
         </div>
 
-        <div className={styles.form__buttons}>
-          <Button
-            color="#151a26"
-            text="Register"
-            disabled={isSubmitting}
-            type="submit"
-            background="#F2F60F"
-          />
-        </div>
+        <div className={styles.form__buttons}></div>
       </div>
     </Form>
   );

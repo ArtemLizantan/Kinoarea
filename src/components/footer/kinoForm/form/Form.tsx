@@ -1,7 +1,6 @@
 import { Formik, Form, Field, useFormikContext } from "formik";
 import React, { useState } from "react";
 import axios from "axios";
-import Button from "../../../UI/button/Button";
 import { initialValues, schemas } from "./helper";
 import styles from "../newsLetter.module.scss";
 import { FormFooterComponentProps } from "../../../../interfaces/interfaces";
@@ -61,13 +60,6 @@ const FormFooterComponent: React.FC<FormFooterComponentProps> = ({
         />
         <ErrorInput name="email" />
       </div>
-      <Button
-        color="#151a26"
-        text="Subscribe"
-        disabled={isSubmitting}
-        type="submit"
-        background="#F2F60F"
-      />
     </Form>
   );
 };

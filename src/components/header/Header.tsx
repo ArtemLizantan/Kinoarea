@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Links from "../UI/link/Link";
 import Container from "../container/Container";
 import Logo from "../logo/Logo";
 import Burger from "./components/burger/Burger";
@@ -12,6 +11,7 @@ import { SlSocialVkontakte } from "react-icons/sl";
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { IIcons, INavLink } from "../../interfaces/interfaces";
 import { ROUTES } from "../../routes";
+import Button from "../UI/Button";
 
 const icons: IIcons[] = [
   { name: <SlSocialVkontakte />, path: "/", id: 1 },
@@ -72,12 +72,7 @@ const Header = () => {
           <div className={styles.header__right}>
             {pc && <HeaderSearch />}
 
-            <Links
-              boxShadow="0 0 15px 0 rgba(72, 113, 255, 0.8)"
-              path={ROUTES.LOGIN}
-              text="Login"
-              background="#3657cb"
-            />
+            <Button route={ROUTES.LOGIN} text="Login" />
           </div>
         </div>
 

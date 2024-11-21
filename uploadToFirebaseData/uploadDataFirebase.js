@@ -1,6 +1,6 @@
-const express = require("express");
+/* eslint-disable @typescript-eslint/no-var-requires */
 const admin = require("firebase-admin");
-const serviceAccount = require("../kinoarea-c2393-firebase-adminsdk-g9fyw-bb867b6219.json");
+const serviceAccount = require("../kinoarea-c2393-firebase-adminsdk-g9fyw-3867b4d7c1");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),

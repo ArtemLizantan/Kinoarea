@@ -5,6 +5,7 @@ import moviesService from "../../../services/movies.service";
 import { IDataMovies } from "../../../interfaces/interfaces";
 import { useMovies } from "../../../context/Context";
 import NowInCinemaTop from "./components/nowInCinemaTop/NowInCinemaTop";
+import Container from "../../../components/container/Container";
 
 const NowInCinema = () => {
   const { data, isLoading } = useQuery<IDataMovies[]>({
@@ -13,7 +14,7 @@ const NowInCinema = () => {
       return new Promise((resolve: any) => {
         moviesService.getFilms(
           { dbFirebase: "movies", limitOfCards: 10 },
-          resolve
+          resolve,
         );
       });
     },
@@ -33,10 +34,15 @@ const NowInCinema = () => {
 
   return (
     <section className={styles.nowcinema}>
-      <div className={styles.nowcinema__body}>
-        <NowInCinemaTop />
-        <NowInCinemaCards isLoading={isLoading} filteredCards={limitedCards} />
-      </div>
+      <Container>
+        <div className={styles.nowcinema__body}>
+          <NowInCinemaTop />
+          <NowInCinemaCards
+            filteredCards={limitedCards}
+            isLoading={isLoading}
+          />
+        </div>
+      </Container>
     </section>
   );
 };

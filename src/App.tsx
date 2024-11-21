@@ -6,7 +6,6 @@ import Footer from "./components/footer/Footer";
 import { ROUTES } from "./routes";
 import Spinner from "./components/spinner/Spinner";
 
-// Использование React.lazy для ленивой загрузки компонентов
 const Home = React.lazy(() => import("./screens/home/Home"));
 const Login = React.lazy(() => import("./screens/login/Login"));
 const Register = React.lazy(() => import("./screens/register/Register"));

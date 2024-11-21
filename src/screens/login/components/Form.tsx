@@ -58,13 +58,6 @@ const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
         </div>
 
         <div className={styles.form__buttons}>
-          <Button
-            color="#151a26"
-            text="Login"
-            disabled={isSubmitting}
-            type="submit"
-            background="#F2F60F"
-          />
           <Links
             background="var(--secondaryBlueColor)"
             path={ROUTES.REGISTER}

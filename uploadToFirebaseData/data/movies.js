@@ -2,8 +2,8 @@ const movies = [
   {
     id: 1,
     title: "Avatar: The Way of Water",
-    vote_average: "7.9",
-    poster_path: "https://m.media-amazon.com/images/I/71pieM7cJtL.jpg",
+    voteAverage: "7.9",
+    posterPath: "https://m.media-amazon.com/images/I/71pieM7cJtL.jpg",
     release_date: "2022-12-15",
     genre: ["Action"],
     duration: "2 hours 41 minutes",
@@ -37,8 +37,8 @@ const movies = [
   {
     id: 2,
     title: "The Lord of the Rings: The Return of the King",
-    vote_average: "8.9",
-    poster_path:
+    voteAverage: "8.9",
+    posterPath:
       "https://cdn.europosters.eu/image/1300/posters/the-lord-of-the-rings-the-return-of-the-king-i104633.jpg",
     release_date: "2003-12-17",
     genre: ["Action"],
@@ -73,8 +73,8 @@ const movies = [
   {
     id: 3,
     title: "Pirates of the Caribbean: The Curse of the Black Pearl",
-    vote_average: "8.0",
-    poster_path:
+    voteAverage: "8.0",
+    posterPath:
       "https://m.media-amazon.com/images/I/71zji3aER6L._AC_UF894,1000_QL80_.jpg",
     release_date: "2003-07-09",
     genre: ["Action"],
@@ -108,8 +108,8 @@ const movies = [
   {
     id: 4,
     title: "Jurassic Park",
-    vote_average: "8.1",
-    poster_path: "https://i.ebayimg.com/images/g/cKcAAOSwEixkUtLA/s-l1200.webp",
+    voteAverage: "8.1",
+    posterPath: "https://i.ebayimg.com/images/g/cKcAAOSwEixkUtLA/s-l1200.webp",
     release_date: "1993-06-11",
     genre: ["Action", "Comedy"],
     duration: "2 hours 7 minutes",
@@ -143,8 +143,8 @@ const movies = [
   {
     id: 5,
     title: "Inception",
-    vote_average: "8.8",
-    poster_path:
+    voteAverage: "8.8",
+    posterPath:
       "https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg",
     release_date: "2010-07-16",
     genre: ["Action"],
@@ -179,8 +179,8 @@ const movies = [
   {
     id: 6,
     title: "The Grand Budapest Hotel",
-    vote_average: "8.1",
-    poster_path:
+    voteAverage: "8.1",
+    posterPath:
       "https://m.media-amazon.com/images/I/51OM85JsXxL._AC_UF1000,1000_QL80_.jpg",
     release_date: "2014-03-07",
     genre: ["Comedy"],
@@ -215,8 +215,8 @@ const movies = [
   {
     id: 7,
     title: "Superbad",
-    vote_average: "7.6",
-    poster_path:
+    voteAverage: "7.6",
+    posterPath:
       "https://m.media-amazon.com/images/I/51RBgkne2yL._AC_UF894,1000_QL80_.jpg",
     release_date: "2007-08-17",
     genre: ["Comedy"],
@@ -251,9 +251,9 @@ const movies = [
   {
     id: 8,
     title: "Gone Girl",
-    vote_average: "8.1",
-    poster_path:
-      "https://play-lh.googleusercontent.com/Xk0RPwvgGG4Cv8Mb6PDk9IW_3bqxuLD4dHuWS6dzt013q7cImxd_J21Cuezi_lYfyIds",
+    voteAverage: "8.1",
+    posterPath:
+      "https://cdn.kobo.com/book-images/395aef2d-44e2-4f98-bb62-33d7130eabcf/1200/1200/False/gone-girl-movie-tie-in-edition-1.jpg",
     release_date: "2014-10-03",
     genre: ["Thriller", "Action"],
     duration: "2 hours 29 minutes",
@@ -288,5 +288,3 @@ const movies = [
 ];
 
 module.exports = movies;
-
-//Ralph Fiennes Harry Potter + The Grand Budapest Hotel

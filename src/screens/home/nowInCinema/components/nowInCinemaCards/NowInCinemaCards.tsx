@@ -1,6 +1,6 @@
-import styles from "./nowInCinemaCards.module.scss";
 import FilmCard from "../../../../../components/filmCard/FilmCard";
 import { INowInCinemaCardsProps } from "../../../../../interfaces/interfaces";
+import styles from "./nowInCinemaCards.module.scss";
 
 const NowInCinemaCards = ({
   filteredCards,
@@ -13,18 +13,16 @@ const NowInCinemaCards = ({
           <div>Loading....</div>
         ) : (
           filteredCards &&
-          filteredCards.map(
-            ({ title, poster_path, genre, id, vote_average }) => (
-              <FilmCard
-                id={id}
-                key={id}
-                name={title}
-                img={poster_path}
-                genre={[genre]}
-                rating={Number(vote_average)}
-              />
-            )
-          )
+          filteredCards.map(({ title, posterPath, genre, id, voteAverage }) => (
+            <FilmCard
+              id={id}
+              key={id}
+              name={title}
+              img={posterPath}
+              genre={[genre]}
+              rating={Number(voteAverage)}
+            />
+          ))
         )}
       </div>
     </div>

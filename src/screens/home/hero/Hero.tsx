@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { AuroraBackground } from "../../../components/UI/AuroraBg/AuroraBg";
-import ButtonHoweredCard from "../../../components/UI/buttonHoweredCard/ButtonHoweredCard";
 
 export function Hero() {
   return (
@@ -21,10 +20,6 @@ export function Hero() {
         <div className="font-extralight text-base md:text-4xl text-white text-center wtext-neutral-200 py-4">
           Immerse Yourself in the Best Cinematic Adventures
         </div>
-        <ButtonHoweredCard
-          text="See more"
-          onClick={() => console.log("hello")}
-        />
       </motion.div>
     </AuroraBackground>
   );

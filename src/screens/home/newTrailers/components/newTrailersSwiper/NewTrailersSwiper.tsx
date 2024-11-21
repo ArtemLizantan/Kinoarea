@@ -45,10 +45,6 @@ const NewTrailersSwiper = ({ trailers }) => {
       <div className={styles.trailerSwiper__body}>
         <div className={styles.trailerSwiper__item}>
           <Swiper
-            style={{
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            }}
             spaceBetween={10}
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Thumbs]}

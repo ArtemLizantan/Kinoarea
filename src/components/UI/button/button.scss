@@ -1,0 +1,35 @@
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 15px 50px;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--blueColor);
+  position: relative;
+  transition: 0.4s ease;
+  overflow: hidden;
+  border: 1px solid;
+  &.active {
+    color: var(--whiteColor);
+  }
+  &__hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0%;
+    right: 0;
+    background-color: #6b84c6;
+    z-index: -1;
+  }
+  @media (max-width: 767px) {
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 556px) {
+    padding: 13px 22px;
+  }
+}

@@ -4,6 +4,7 @@ import NewTrailersSwiper from "./components/newTrailersSwiper/NewTrailersSwiper"
 import styles from "./newTrailers.module.scss";
 import { IDataMovies } from "../../../interfaces/interfaces";
 import { useEffect, useState } from "react";
+import Container from "../../../components/container/Container";
 
 const NewTrailers = () => {
   const { data, isLoading } = useQuery<IDataMovies[]>({
@@ -20,23 +21,29 @@ const NewTrailers = () => {
           backGroundPoster,
           trailer,
           id,
-        })
+        }),
       );
       setArrayTrailersFromMovies(modifiedData);
     }
   }, [data]);
 
+  console.log(arrayTrailersFromMovies);
+
   return (
-    <div className={styles.trailers}>
-      <div className={styles.trailers__body}>
-        <div className={styles.trailers__top}>
-          <Title text="New trailers" />
+    <section>
+      <Container>
+        <div className={styles.trailers}>
+          <div className={styles.trailers__body}>
+            <div className={styles.trailers__top}>
+              <Title text="New trailers" />
+            </div>
+            <div className={styles.trailers__bottom}>
+              <NewTrailersSwiper trailers={arrayTrailersFromMovies} />
+            </div>
+          </div>
         </div>
-        <div className={styles.trailers__bottom}>
-          <NewTrailersSwiper trailers={arrayTrailersFromMovies} />
-        </div>
-      </div>
-    </div>
+      </Container>
+    </section>
   );
 };
 
