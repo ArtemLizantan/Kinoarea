@@ -10,9 +10,10 @@ import { ROUTES } from "../../routes";
 
 interface ISearchProps {
   onClose: () => void;
+  active: boolean;
 }
 
-const Search = ({ onClose }: ISearchProps) => {
+const Search = ({ onClose, active }: ISearchProps) => {
   const [searchItem, setSearchItem] = useState("");
 
   const debouncedSearchItem = debounce((value: string) => {
@@ -43,7 +44,7 @@ const Search = ({ onClose }: ISearchProps) => {
   };
 
   return (
-    <div className={styles.search}>
+    <div className={`${styles.search} ${active ? "_active" : "hidden"}`}>
       <div className={styles.search__body}>
         <form className={styles.search__form} action="">
           <div className={styles.search__wrap}>

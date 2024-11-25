@@ -77,7 +77,7 @@ const Header = () => {
           </div>
         </Container>
       </header>
-      {activeSearch && <Search onClose={handleSearchClose} />}
+      <Search active={activeSearch} onClose={handleSearchClose} />
     </>
   );
 };
