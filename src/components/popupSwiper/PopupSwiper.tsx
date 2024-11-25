@@ -50,9 +50,9 @@ const PopupSwiper = ({
       footer={null}
       width={1000}
       styles={modalStyles}
-      className={classNames}
+      classNames={classNames}
     >
-      <SwiperPhotos photos={photos} />
+      {photos !== undefined && <SwiperPhotos photos={photos} />}
     </Modal>
   );
 };

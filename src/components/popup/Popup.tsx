@@ -1,3 +1,4 @@
+import React from "react";
 import { Modal } from "antd";
 import { createStyles } from "antd-style";
 
@@ -12,7 +13,13 @@ const useStyle = createStyles(() => ({
   },
 }));
 
-const Popup = ({ isModalOpen, setIsModalOpen, children }) => {
+interface IPopupProps {
+  isModalOpen: boolean;
+  setIsModalOpen: (isModalOpen: boolean) => void;
+  children: React.ReactNode;
+}
+
+const Popup = ({ isModalOpen, setIsModalOpen, children }: IPopupProps) => {
   const { styles } = useStyle();
 
   const handleCancel = () => {
@@ -22,6 +29,7 @@ const Popup = ({ isModalOpen, setIsModalOpen, children }) => {
   const classNames = {
     mask: styles["my-modal-mask"],
     content: styles["my-modal-content"],
+    close: styles["my-modal-close"],
   };
 
   const modalStyles = {
@@ -34,6 +42,9 @@ const Popup = ({ isModalOpen, setIsModalOpen, children }) => {
     modal: {
       width: "100%",
     },
+    close: {
+      color: "#fff",
+    },
   };
 
   return (
@@ -45,7 +56,7 @@ const Popup = ({ isModalOpen, setIsModalOpen, children }) => {
         onCancel={handleCancel}
         footer={null}
         styles={modalStyles}
-        className={classNames}
+        classNames={classNames}
       >
         {children}
       </Modal>

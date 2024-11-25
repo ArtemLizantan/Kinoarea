@@ -21,7 +21,7 @@ const Popular = () => {
             value: "7.4",
           },
           (moviesData) => {
-            resolve(moviesData as IDataMovies[]);
+            resolve(moviesData as unknown as IDataMovies[]);
           },
         );
       });
@@ -41,6 +41,7 @@ const Popular = () => {
   console.log(filteredCards);
 
   const limitedCards = filteredCards?.slice(0, 8);
+
   return (
     <section className={styles.nowcinema}>
       <Container>

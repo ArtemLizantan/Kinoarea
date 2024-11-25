@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Title from "../../../../components/title/Title";
-import myStyles from "./moviePhotos.module.scss";
+import styles from "./moviePhotos.module.scss";
 import PopupSwiper from "../../../../components/popupSwiper/PopupSwiper";
 import Button from "../../../../components/UI/Button";
 
@@ -14,17 +14,20 @@ const MoviePhotos = ({ array }: { array: string[] | undefined }) => {
 
   return (
     <>
-      <div className={myStyles.photos}>
-        <div className={myStyles.photos__body}>
-          <div className={myStyles.photos__top}>
-            <Title text={"Photos from movie"} />
+      <div className={styles.photos}>
+        <div className={styles.photos__body}>
+          <div className={styles.photos__top}>
+            <Title text="Photos from movie" />
           </div>
-          <div className={myStyles.photos__bottom}>
+          <div className={styles.photos__bottom}>
             {limitedPhotos !== undefined &&
               limitedPhotos.map((img: string) => (
-                <div key={img} className={myStyles.photos__item}>
-                  <div className={myStyles.photos__hovered}>
-                    <Button onClick={showModal} text="Look all photos" />
+                <div key={img} className={styles.photos__item}>
+                  <div className={styles.photos__hovered}>
+                    <div className={styles.photos__bg}></div>
+                    <div className={styles.photos__btn}>
+                      <Button onClick={showModal} text="Look all photos" />
+                    </div>
                   </div>
                   <img src={img} alt="photo" />
                 </div>

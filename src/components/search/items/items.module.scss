@@ -1,0 +1,127 @@
+.item {
+  width: 100%;
+  background: var(--main-bg);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  @media (max-width: 1550px) {
+    min-height: 300px;
+  }
+  @media (max-width: 991px) {
+    min-height: 250px;
+  }
+  @media (max-width: 556px) {
+    min-height: 170px;
+  }
+  &:hover {
+    background: var(--borderColor);
+    .item__right {
+      h4 {
+        color: var(--main-bg);
+      }
+      p {
+        color: var(--blackColor);
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    @media (max-width: 556px) {
+      padding: 10px;
+    }
+  }
+  &__wrapLeft {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @media (max-width: 991px) {
+      gap: 30px;
+    }
+  }
+  &__left {
+    img {
+      width: 245px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      @media (max-width: 1550px) {
+        width: 200px;
+        height: 250px;
+      }
+      @media (max-width: 991px) {
+        width: 140px;
+        height: 200px;
+        object-fit: cover;
+      }
+      @media (max-width: 556px) {
+        width: 100px;
+        height: 150px;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      font-weight: 700;
+      font-size: 55px;
+      color: var(--whiteColor);
+      max-width: 700px;
+      line-height: 60px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; // количество строк
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @media (max-width: 1550px) {
+        font-size: 40px;
+      }
+      @media (max-width: 991px) {
+        font-size: 30px;
+      }
+      @media (max-width: 556px) {
+        font-size: 22px;
+        max-width: 200px;
+        line-height: 30px;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 35px;
+      color: var(--yellowColor);
+      @media (max-width: 1550px) {
+        font-size: 30px;
+      }
+      @media (max-width: 991px) {
+        font-size: 20px;
+      }
+      @media (max-width: 556px) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__avg {
+    @media (max-width: 556px) {
+      display: none;
+    }
+  }
+}

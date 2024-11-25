@@ -65,7 +65,7 @@ const Pie: React.FC<PieProps> = ({ rating, colour }) => {
 };
 
 interface ProgressCircleRatingProps {
-  rating?: string;
+  rating?: number;
 }
 
 const ProgressCircleRating: React.FC<ProgressCircleRatingProps> = ({

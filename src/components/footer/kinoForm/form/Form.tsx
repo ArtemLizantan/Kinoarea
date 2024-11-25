@@ -5,6 +5,7 @@ import { initialValues, schemas } from "./helper";
 import styles from "../newsLetter.module.scss";
 import { FormFooterComponentProps } from "../../../../interfaces/interfaces";
 import ErrorInput from "../../../UI/errorInput/ErrorInput";
+import Button from "../../../UI/Button";
 
 interface FormValues {
   email: string;
@@ -28,8 +29,7 @@ const FooterForm: React.FC = () => {
         } catch (error) {
           setError(true);
           console.error("Ошибка входа:", error);
-          // Assuming notifyError is defined somewhere in your codebase
-          // notifyError();
+
           actions.setSubmitting(false);
         }
       }}
@@ -60,6 +60,7 @@ const FormFooterComponent: React.FC<FormFooterComponentProps> = ({
         />
         <ErrorInput name="email" />
       </div>
+      <Button text="Submit" background="#f2f60f" />
     </Form>
   );
 };

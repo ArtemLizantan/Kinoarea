@@ -29,18 +29,26 @@ class MoviesServices {
       options,
       value,
       limitOfCards,
+      search,
     }: IMovieServicesGetFilmProps,
     callback: GetFilmsCallback,
   ): Promise<void> {
     const constraints: QueryConstraint[] = [
       field && where(field, options as WhereFilterOp, value),
-      firestoreLimit(limitOfCards),
+      limitOfCards && firestoreLimit(limitOfCards),
     ].filter(Boolean) as QueryConstraint[];
 
     const q = query(collection(db, dbFirebase), ...constraints);
 
     onSnapshot(q, (snapshot) => {
-      const moviesData = snapshot.docs.map((doc) => doc.data() as MovieData);
+      let moviesData = snapshot.docs.map((doc) => doc.data() as MovieData);
+
+      if (search) {
+        moviesData = moviesData.filter((movie) =>
+          movie.title.toLowerCase().includes(search.toLowerCase()),
+        );
+      }
+
       callback(moviesData);
     });
   }

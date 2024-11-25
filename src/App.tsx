@@ -11,7 +11,6 @@ const Login = React.lazy(() => import("./screens/login/Login"));
 const Register = React.lazy(() => import("./screens/register/Register"));
 const InfoCard = React.lazy(() => import("./screens/moviePage/MoviePage"));
 const Cabinet = React.lazy(() => import("./screens/cabinet/Cabinet"));
-const Search = React.lazy(() => import("./screens/search/Search"));
 
 function App() {
   const { pathname } = useLocation();
@@ -31,7 +30,6 @@ function App() {
             <Route path={ROUTES.REGISTER} element={<Register />} />
             <Route path={`${ROUTES.MOVIE}/:id`} element={<InfoCard />} />
             <Route path={ROUTES.CABINET} element={<Cabinet />} />
-            <Route path={ROUTES.SEARCH} element={<Search />} />
           </Routes>
         </Suspense>
       </Layout>

@@ -1,8 +1,9 @@
 import { WhereFilterOp } from "firebase/firestore";
-import React, { MouseEventHandler } from "react";
+import { MouseEventHandler } from "react";
+import { IconType } from "react-icons";
 
 export interface IIcons {
-  name: React.ReactNode;
+  name: IconType;
   path: string;
   id: number;
 }
@@ -137,7 +138,8 @@ export interface IMovieServicesGetFilmProps {
   field?: string;
   options?: WhereFilterOp;
   value?: string | number | boolean;
-  limitOfCards: number;
+  limitOfCards?: number;
+  search?: string;
 }
 
 export interface FormFooterComponentProps {
