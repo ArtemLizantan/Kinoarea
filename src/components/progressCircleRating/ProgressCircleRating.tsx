@@ -1,26 +1,27 @@
 import React from "react";
 
 interface CircleProps {
-  colour: string;
-  rating: number;
+  color: string;
+  progress: number;
 }
 
-const Circle: React.FC<CircleProps> = ({ colour, rating }) => {
-  const r = 26; // радиус
+const Circle: React.FC<CircleProps> = ({ color, progress }) => {
+  const r = 26; // Радиус круга
   const circ = 2 * Math.PI * r;
-  const strokePct = ((10 - rating) * circ) / 10;
+  const strokePct = circ - (progress / 10) * circ; // Корректный расчёт
 
   return (
     <circle
       r={r}
-      cx={26}
-      cy={26}
+      cx={30}
+      cy={30}
       fill="transparent"
-      stroke={strokePct !== circ ? colour : ""}
+      stroke={color}
       strokeWidth={5}
       strokeDasharray={circ}
-      strokeDashoffset={rating ? strokePct : 0}
-    ></circle>
+      strokeDashoffset={strokePct}
+      strokeLinecap="round"
+    />
   );
 };
 
@@ -28,38 +29,40 @@ interface TextProps {
   rating: number;
 }
 
-const Text: React.FC<TextProps> = ({ rating }) => {
-  return (
-    <text
-      x="46%"
-      y="48%"
-      dominantBaseline="central"
-      textAnchor="middle"
-      fontSize="15px"
-      fontWeight="700"
-      fill="#fff"
-    >
-      {rating.toFixed(1)}
-    </text>
-  );
-};
+const Text: React.FC<TextProps> = ({ rating }) => (
+  <text
+    x="50%"
+    y="50%"
+    dominantBaseline="middle"
+    textAnchor="middle"
+    fontSize="14px"
+    fontWeight="bold"
+    fill="#fff"
+  >
+    {rating}
+  </text>
+);
 
 interface PieProps {
-  rating: string;
-  colour: string;
+  rating: number;
 }
 
-const Pie: React.FC<PieProps> = ({ rating, colour }) => {
-  const ratingNum = Number(rating);
-  const cleanedRating = Math.min(Math.max(ratingNum, 0), 10);
+const Pie: React.FC<PieProps> = ({ rating }) => {
+  const clampedRating = Math.min(Math.max(rating, 0), 10); // Ограничение от 0 до 10
+
+  const getColor = (value: number) => {
+    if (value >= 7) return "#4bcb36";
+    if (value >= 4) return "#ffbf00";
+    return "#ff3b30";
+  };
 
   return (
     <svg width={60} height={60}>
-      <g transform={`rotate(-90 ${"28 26.4"})`}>
-        <Circle colour="lightgrey" rating={cleanedRating} />
-        <Circle colour={colour} rating={cleanedRating} />
+      <g transform="rotate(-90 30 30)">
+        <Circle color="lightgrey" progress={10} />
+        <Circle color={getColor(clampedRating)} progress={clampedRating} />
       </g>
-      <Text rating={cleanedRating} />
+      <Text rating={clampedRating} />
     </svg>
   );
 };
@@ -70,8 +73,6 @@ interface ProgressCircleRatingProps {
 
 const ProgressCircleRating: React.FC<ProgressCircleRatingProps> = ({
   rating = 0,
-}) => {
-  return <Pie rating={rating} colour="#4bcb36" />;
-};
+}) => <Pie rating={rating} />;
 
 export default ProgressCircleRating;

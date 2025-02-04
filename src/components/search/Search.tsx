@@ -16,6 +16,11 @@ interface ISearchProps {
 const Search = ({ onClose, active }: ISearchProps) => {
   const [searchItem, setSearchItem] = useState("");
 
+  const handleClickMovie = () => {
+    setSearchItem("");
+    onClose();
+  };
+
   const debouncedSearchItem = debounce((value: string) => {
     setSearchItem(value);
   }, 500);
@@ -73,6 +78,7 @@ const Search = ({ onClose, active }: ISearchProps) => {
                 genre={movie.genre}
                 route={`${ROUTES.MOVIE}/:id${movie.id}`}
                 voteAverage={movie.voteAverage}
+                onClick={handleClickMovie}
               />
             ))}
           {!isLoading && !movies?.length && searchItem && (

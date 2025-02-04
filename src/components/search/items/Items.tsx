@@ -8,6 +8,7 @@ interface IItemsProps {
   genre: string[];
   route: string;
   voteAverage: string;
+  onClick: () => void;
 }
 
 export default function Items({
@@ -16,9 +17,10 @@ export default function Items({
   genre,
   route,
   voteAverage,
+  onClick,
 }: IItemsProps) {
   return (
-    <Link to={route} className={styles.item}>
+    <Link onClick={onClick} to={route} className={styles.item}>
       <div className={styles.item__body}>
         <div className={styles.item__wrapLeft}>
           <div className={styles.item__left}>
@@ -30,7 +32,7 @@ export default function Items({
           </div>
         </div>
         <div className={styles.item__avg}>
-          <ProgressCircleRating rating={voteAverage} />
+          <ProgressCircleRating rating={Number(voteAverage)} />
         </div>
       </div>
     </Link>
