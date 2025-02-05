@@ -2,8 +2,16 @@
   font-weight: 900;
   font-size: 65px;
   color: #fff;
+  max-width: 800px;
+  line-height: 70px;
   @media (max-width: 1024px) {
     font-size: 40px;
+    line-height: 50px;
+    max-width: 500px;
+  }
+  @media (max-width: 768px) {
+    max-width: unset;
+    text-align: center;
   }
   @media (max-width: 567px) {
     font-size: 31px;

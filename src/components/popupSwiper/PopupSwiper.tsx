@@ -2,15 +2,12 @@ import { Modal } from "antd";
 import { createStyles } from "antd-style";
 import SwiperPhotos from "./SwiperPhotos";
 import { IPopupSwiperProps } from "../../interfaces/interfaces";
+import "./popupSwiper.scss";
 
 const useStyle = createStyles(() => ({
   "my-modal-mask": {},
   "my-modal-content": {
     border: "1px solid #333",
-  },
-  "my-modal-close": {},
-  "ant-modal-close": {
-    backgroundColor: "red",
   },
 }));
 
@@ -43,17 +40,19 @@ const PopupSwiper = ({
   };
 
   return (
-    <Modal
-      open={isModalOpen}
-      onCancel={handleCancel}
-      centered
-      footer={null}
-      width={1000}
-      styles={modalStyles}
-      classNames={classNames}
-    >
-      {photos !== undefined && <SwiperPhotos photos={photos} />}
-    </Modal>
+    <div className="popup-swiper">
+      <Modal
+        open={isModalOpen}
+        onCancel={handleCancel}
+        centered
+        footer={null}
+        width={1000}
+        styles={modalStyles}
+        classNames={classNames}
+      >
+        {photos !== undefined && <SwiperPhotos photos={photos} />}
+      </Modal>
+    </div>
   );
 };
 

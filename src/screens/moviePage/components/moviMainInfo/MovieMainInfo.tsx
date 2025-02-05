@@ -3,14 +3,14 @@ import MovieTrailerButton from "../../../../components/UI/movieTrailerButton/Mov
 import SocialLinks from "../../../../components/header/components/socialLinks/SocialLinks";
 import ProgressCircleRating from "../../../../components/progressCircleRating/ProgressCircleRating";
 import Title from "../../../../components/title/Title";
-import { IMainInfoCardProps } from "../../../../interfaces/interfaces";
+import { IIcons, IMainInfoCardProps } from "../../../../interfaces/interfaces";
 import styles from "./mainInfoCard.module.scss";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useState } from "react";
 import Popup from "../../../../components/popup/Popup";
 import useResizeObserver from "use-resize-observer";
 
-const icons = [
+const icons: IIcons[] = [
   { name: <SlSocialVkontakte />, path: "/", id: 1 },
   { name: <FaInstagram />, path: "/", id: 2 },
   { name: <FaFacebookF />, path: "/", id: 3 },
@@ -55,10 +55,10 @@ const MainInfoCard = ({
               <Title text={title} />
             </div>
             <div className={styles.cardInfoRight__subtitle}>{slogan}</div>
+            {!mobile && <ProgressCircleRating rating={Number(rating)} />}
             {mobile && (
               <div className={styles.cardInfo__left}>
                 <img src={poster} alt="poster" />
-                {!mobile && <ProgressCircleRating rating={Number(rating)} />}
               </div>
             )}
             <div className={styles.cardInfoRight__rating}>

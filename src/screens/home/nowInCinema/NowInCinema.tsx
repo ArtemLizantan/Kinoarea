@@ -1,4 +1,3 @@
-import styles from "./nowincinema.module.scss";
 import NowInCinemaCards from "./components/nowInCinemaCards/NowInCinemaCards";
 import { useQuery } from "@tanstack/react-query";
 import moviesService from "../../../services/movies.service";
@@ -33,9 +32,9 @@ const NowInCinema = () => {
   const limitedCards = filteredCards?.slice(0, 8);
 
   return (
-    <section className={styles.nowcinema}>
+    <section>
       <Container>
-        <div className={styles.nowcinema__body}>
+        <div>
           <NowInCinemaTop />
           <NowInCinemaCards
             filteredCards={limitedCards}

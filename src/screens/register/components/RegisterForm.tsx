@@ -57,7 +57,7 @@ const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
           <div className={styles.form__inputWrapper}>
             <label className={styles.form__label}>
               <Field type="checkbox" name="checked" value="Two" />
-              <span>Соглашаюсь на условия политики конфиденциальности</span>
+              <span>I agree to the terms of the Privacy Policy</span>
             </label>
             <ErrorInput name="checked" />
           </div>
@@ -65,8 +65,8 @@ const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
             <label className={styles.form__label}>
               <Field type="checkbox" name="checked1" value="One" />
               <span>
-                Соглашаюсь на обработку
-                <Link to={ROUTES.PRIVACY_POLICY}> персональных данных</Link>
+                I agree to the processing &nbsp;
+                <Link to={ROUTES.PRIVACY_POLICY}>personal data</Link>
               </span>
             </label>
             <ErrorInput name="checked1" />

@@ -24,14 +24,16 @@
   @media (max-width: 556px) {
     min-height: 170px;
   }
-  &:hover {
-    background: var(--borderColor);
-    .item__right {
-      h4 {
-        color: var(--main-bg);
-      }
-      p {
-        color: var(--blackColor);
+  @media (min-width: 991px) {
+    &:hover {
+      background: var(--borderColor);
+      .item__right {
+        h4 {
+          color: var(--main-bg);
+        }
+        p {
+          color: var(--blackColor);
+        }
       }
     }
   }
@@ -52,6 +54,9 @@
     gap: 50px;
     @media (max-width: 991px) {
       gap: 30px;
+    }
+    @media (max-width: 556px) {
+      gap: 20px;
     }
   }
   &__left {
@@ -89,7 +94,7 @@
       max-width: 700px;
       line-height: 60px;
       display: -webkit-box;
-      -webkit-line-clamp: 3; // количество строк
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
       @media (max-width: 1550px) {
@@ -99,7 +104,7 @@
         font-size: 30px;
       }
       @media (max-width: 556px) {
-        font-size: 22px;
+        font-size: 17px;
         max-width: 200px;
         line-height: 30px;
       }

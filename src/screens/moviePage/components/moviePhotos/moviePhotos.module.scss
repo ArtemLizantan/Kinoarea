@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 22px;
+    gap: 10px;
   }
 
   &__hovered {
@@ -65,6 +65,9 @@
     @media (max-width: 1499px) {
       width: 70%;
       margin: 0 auto;
+    }
+    @media (max-width: 556px) {
+      width: 100%;
     }
 
     img {

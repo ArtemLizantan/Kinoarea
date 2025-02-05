@@ -10,6 +10,8 @@ const CardsTop = ({ tabsData, setTabsData, array, nameTitle }) => {
   const { ref, width } = useResizeObserver<HTMLDivElement>();
   const [openMenu, setOpenMenu] = useState(false);
 
+  console.log(openMenu);
+
   const mobile = width !== undefined ? width <= 567 : false;
 
   const handleMenuOpen = () => {

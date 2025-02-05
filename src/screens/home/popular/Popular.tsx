@@ -31,7 +31,7 @@ const Popular = () => {
   const { tabsDataPopular } = useMovies();
 
   const filteredCards = data?.filter((movie) => {
-    if (tabsDataPopular === "All") {
+    if (tabsDataPopular === "All" && movie.voteAverage >= "8") {
       return true;
     } else {
       return movie.year.includes(tabsDataPopular);
@@ -40,7 +40,7 @@ const Popular = () => {
 
   console.log(filteredCards);
 
-  const limitedCards = filteredCards?.slice(0, 8);
+  const limitedCards = filteredCards?.slice(0, 4);
 
   return (
     <section className={styles.nowcinema}>

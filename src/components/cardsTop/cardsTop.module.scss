@@ -14,13 +14,14 @@
       align-items: flex-start;
       gap: 20px;
     }
-    @media (max-width: 567px) {
+    @media (max-width: 597px) {
       gap: 10px;
       align-items: unset;
     }
   }
   &__left {
-    @media (max-width: 567px) {
+    @media (max-width: 768px) {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;

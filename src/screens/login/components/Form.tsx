@@ -5,6 +5,7 @@ import { FormFooterComponentProps } from "../../../interfaces/interfaces";
 import { initialValues, schemas } from "./helper";
 import styles from "./loginForm.module.scss";
 import Button from "../../../components/UI/Button";
+import { ROUTES } from "../../../routes";
 
 interface FormValues {
   email: string;
@@ -58,6 +59,11 @@ const FormLoginComponent = ({ isSubmitting }: FormFooterComponentProps) => {
 
         <div className={styles.form__buttons}>
           <Button type="submit" text="Login" background="#f2f60f" />
+          <Button
+            route={ROUTES.REGISTER}
+            text="Create Account"
+            background="#FFFFFF"
+          />
         </div>
       </div>
     </Form>

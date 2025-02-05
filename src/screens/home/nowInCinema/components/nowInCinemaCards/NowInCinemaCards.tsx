@@ -19,8 +19,8 @@ const NowInCinemaCards = ({
               key={id}
               name={title}
               img={posterPath}
-              genre={[genre]}
-              rating={Number(voteAverage)}
+              genre={genre}
+              rating={voteAverage}
             />
           ))
         )}

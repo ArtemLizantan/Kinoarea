@@ -1,6 +1,11 @@
 import { WhereFilterOp } from "firebase/firestore";
-import { MouseEventHandler } from "react";
-import { IconType } from "react-icons";
+import { MouseEventHandler, ReactElement } from "react";
+
+export interface IIcons {
+  name: ReactElement;
+  path: string;
+  id: number;
+}
 
 export interface INavLink {
   name: string;

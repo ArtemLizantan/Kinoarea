@@ -1,3 +1,24 @@
+.ant-modal-close {
+  color: white !important;
+  background: var(--blueColor) !important;
+  transition: all 0.4s;
+  right: -10% !important;
+  top: -10% !important;
+  @media (max-width: 1300px) {
+    right: 0px !important;
+    top: 0% !important;
+  }
+  @media (min-width: 991px) {
+    &:hover {
+      background: rgba(0, 0, 0, 0.8) !important;
+    }
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .swiper {
   background: var(--main-bg);
   width: 100%;
@@ -41,11 +62,17 @@
 .mySwiper2 .swiper-slide img {
   height: 450px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
+  @media (max-width: 556px) {
+    height: 300px;
+  }
 }
 .mySwiper .swiper-slide img {
   height: 150px;
   object-fit: cover;
+  @media (max-width: 556px) {
+    height: 100px;
+  }
 }
 
 .mySwiper .swiper-slide-thumb-active {
@@ -57,4 +84,47 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-button {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background: var(--blueColor);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: background 0.3s ease;
+
+  &::after {
+    content: unset;
+  }
+
+  @media (min-width: 991px) {
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+.swiper-button-prev {
+  left: 10px;
+  font-size: 30px;
+}
+
+.swiper-button-next {
+  right: 10px;
+  font-size: 30px;
 }

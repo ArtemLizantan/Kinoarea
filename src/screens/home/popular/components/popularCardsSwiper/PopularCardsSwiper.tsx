@@ -1,52 +1,13 @@
 import FilmCard from "../../../../../components/filmCard/FilmCard";
 import { INowInCinemaCardsProps } from "../../../../../interfaces/interfaces";
-import styles from "./popularCardsSwiper.module.scss";
-import "./popularCardsSwiper.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import styles from "./popularCard.module.scss";
 
 const PopularCardsSwiper = ({
   filteredCards,
   isLoading,
 }: INowInCinemaCardsProps) => {
   return (
-    <Swiper
-      pagination={{
-        type: "fraction",
-      }}
-      slidesPerView={4}
-      navigation={true}
-      modules={[Pagination, Navigation]}
-      className="popularSwiper"
-      breakpoints={{
-        375: {
-          slidesPerView: 2.2,
-
-          spaceBetween: 10,
-        },
-        480: {
-          slidesPerView: 2.5,
-
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1440: {
-          slidesPerView: 4,
-        },
-        1920: {
-          slidesPerView: 4,
-        },
-      }}
-    >
+    <section>
       <div className={styles.cards}>
         <div className={styles.cards__body}>
           {isLoading ? (
@@ -55,21 +16,20 @@ const PopularCardsSwiper = ({
             filteredCards &&
             filteredCards.map(
               ({ title, posterPath, genre, id, voteAverage }) => (
-                <SwiperSlide key={id}>
-                  <FilmCard
-                    id={id}
-                    name={title}
-                    img={posterPath}
-                    genre={genre}
-                    rating={voteAverage}
-                  />
-                </SwiperSlide>
+                <FilmCard
+                  key={id}
+                  id={id}
+                  name={title}
+                  img={posterPath}
+                  genre={genre}
+                  rating={voteAverage}
+                />
               ),
             )
           )}
         </div>
       </div>
-    </Swiper>
+    </section>
   );
 };
 
