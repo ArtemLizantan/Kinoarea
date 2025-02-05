@@ -1,4 +1,5 @@
 import { INavLink } from "../../interfaces/interfaces";
+import { ROUTES } from "../../routes";
 
 export const navLinks: INavLink[] = [
   { name: "Schedule", path: "/", id: 1 },
@@ -7,5 +8,5 @@ export const navLinks: INavLink[] = [
   { name: "Actors", path: "/", id: 4 },
   { name: "News", path: "/", id: 5 },
   { name: "Collections", path: "/", id: 6 },
-  { name: "Categories", path: "/", id: 7 },
+  { name: "Categories", path: ROUTES.CATEGORIES, id: 7 },
 ];

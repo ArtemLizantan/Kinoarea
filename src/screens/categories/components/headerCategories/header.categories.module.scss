@@ -1,0 +1,14 @@
+.header {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (max-width: 556px) {
+      gap: 10px;
+    }
+
+    p {
+      max-width: 900px;
+    }
+  }
+}

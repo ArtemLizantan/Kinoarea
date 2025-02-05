@@ -25,7 +25,7 @@ const NowInCinema = () => {
     if (tabsDataNowInCinema === "All") {
       return true;
     } else {
-      return movie.genre.includes(tabsDataNowInCinema);
+      return movie.genre.includes(tabsDataNowInCinema.toLowerCase());
     }
   });
 
